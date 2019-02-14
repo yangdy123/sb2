@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1545025457499_0" label="dubbo-springboot" name="dubbo-springboot">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dubbo-springboot-master" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dubbo-api" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dubbo-consumer" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dubbo-provider" type="4"/>
+</workingSet>
+</workingSetManager>

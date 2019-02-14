@@ -1,0 +1,2627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.PlayerMapper">
+  <resultMap id="BaseResultMap" type="com.example.bean.Player">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+    <result column="sid" jdbcType="INTEGER" property="sid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="icon" jdbcType="INTEGER" property="icon" />
+    <result column="maxFightPower" jdbcType="INTEGER" property="maxfightpower" />
+    <result column="gmLevel" jdbcType="INTEGER" property="gmlevel" />
+    <result column="cheatTimes" jdbcType="INTEGER" property="cheattimes" />
+    <result column="banned_ChatExpiredTime" jdbcType="INTEGER" property="bannedChatexpiredtime" />
+    <result column="banned_LoginExpiredTime" jdbcType="INTEGER" property="bannedLoginexpiredtime" />
+    <result column="bannedTimes" jdbcType="INTEGER" property="bannedtimes" />
+    <result column="lastLogin" jdbcType="INTEGER" property="lastlogin" />
+    <result column="lastLogout" jdbcType="INTEGER" property="lastlogout" />
+    <result column="online_update" jdbcType="INTEGER" property="onlineUpdate" />
+    <result column="totalRecharge" jdbcType="INTEGER" property="totalrecharge" />
+    <result column="vipExp" jdbcType="INTEGER" property="vipexp" />
+    <result column="vipLevel" jdbcType="INTEGER" property="viplevel" />
+    <result column="lv" jdbcType="INTEGER" property="lv" />
+    <result column="exp" jdbcType="INTEGER" property="exp" />
+    <result column="crystal" jdbcType="INTEGER" property="crystal" />
+    <result column="gold" jdbcType="INTEGER" property="gold" />
+    <result column="dungeon_lv" jdbcType="INTEGER" property="dungeonLv" />
+    <result column="dungeon_time" jdbcType="INTEGER" property="dungeonTime" />
+    <result column="ext_package" jdbcType="INTEGER" property="extPackage" />
+    <result column="createTime" jdbcType="INTEGER" property="createtime" />
+    <result column="GmMailCheckId" jdbcType="BIGINT" property="gmmailcheckid" />
+    <result column="strengthen_material" jdbcType="INTEGER" property="strengthenMaterial" />
+    <result column="gem_material" jdbcType="INTEGER" property="gemMaterial" />
+    <result column="star_material" jdbcType="INTEGER" property="starMaterial" />
+    <result column="mer_material" jdbcType="INTEGER" property="merMaterial" />
+    <result column="wing_material" jdbcType="INTEGER" property="wingMaterial" />
+    <result column="arena_token" jdbcType="INTEGER" property="arenaToken" />
+    <result column="equip_instance_material" jdbcType="INTEGER" property="equipInstanceMaterial" />
+    <result column="gem_instance_material" jdbcType="INTEGER" property="gemInstanceMaterial" />
+    <result column="meridian_instance_material" jdbcType="INTEGER" property="meridianInstanceMaterial" />
+    <result column="lingbao_instance_material" jdbcType="INTEGER" property="lingbaoInstanceMaterial" />
+    <result column="wing_instance_material" jdbcType="INTEGER" property="wingInstanceMaterial" />
+    <result column="starinfo_instance_material" jdbcType="INTEGER" property="starinfoInstanceMaterial" />
+    <result column="red_piece" jdbcType="INTEGER" property="redPiece" />
+    <result column="artifice_material" jdbcType="INTEGER" property="artificeMaterial" />
+    <result column="lottery" jdbcType="INTEGER" property="lottery" />
+    <result column="warspirit_talent_material" jdbcType="INTEGER" property="warspiritTalentMaterial" />
+    <result column="warspirit_lv_material" jdbcType="INTEGER" property="warspiritLvMaterial" />
+    <result column="warspirit_lv" jdbcType="INTEGER" property="warspiritLv" />
+    <result column="warspirit_exp" jdbcType="INTEGER" property="warspiritExp" />
+    <result column="warspirit_talent" jdbcType="INTEGER" property="warspiritTalent" />
+    <result column="vicegeneral_decomposition" jdbcType="INTEGER" property="vicegeneralDecomposition" />
+    <result column="vicegeneral_drawCard" jdbcType="INTEGER" property="vicegeneralDrawcard" />
+    <result column="copyCent" jdbcType="INTEGER" property="copycent" />
+    <result column="civilWarCent" jdbcType="INTEGER" property="civilwarcent" />
+    <result column="GuildForage" jdbcType="INTEGER" property="guildforage" />
+    <result column="dress_material" jdbcType="INTEGER" property="dressMaterial" />
+    <result column="exp_material" jdbcType="INTEGER" property="expMaterial" />
+    <result column="rebirth" jdbcType="INTEGER" property="rebirth" />
+    <result column="rebirthExp" jdbcType="INTEGER" property="rebirthexp" />
+    <result column="preMainTaskId" jdbcType="INTEGER" property="premaintaskid" />
+    <result column="curMainTaskCompleteCount" jdbcType="INTEGER" property="curmaintaskcompletecount" />
+    <result column="microRewardState" jdbcType="INTEGER" property="microrewardstate" />
+    <result column="viceGeneratanceMaterial" jdbcType="INTEGER" property="vicegeneratancematerial" />
+    <result column="viceGeneratanceInstanceTime" jdbcType="INTEGER" property="vicegeneratanceinstancetime" />
+    <result column="title_0" jdbcType="INTEGER" property="title0" />
+    <result column="title_1" jdbcType="INTEGER" property="title1" />
+    <result column="title_2" jdbcType="INTEGER" property="title2" />
+    <result column="clientData_0" jdbcType="INTEGER" property="clientdata0" />
+    <result column="clientData_1" jdbcType="INTEGER" property="clientdata1" />
+    <result column="clientData_2" jdbcType="INTEGER" property="clientdata2" />
+    <result column="clientData_3" jdbcType="INTEGER" property="clientdata3" />
+    <result column="clientData_4" jdbcType="INTEGER" property="clientdata4" />
+    <result column="clientData_5" jdbcType="INTEGER" property="clientdata5" />
+    <result column="clientData_6" jdbcType="INTEGER" property="clientdata6" />
+    <result column="clientData_7" jdbcType="INTEGER" property="clientdata7" />
+    <result column="clientData_8" jdbcType="INTEGER" property="clientdata8" />
+    <result column="clientData_9" jdbcType="INTEGER" property="clientdata9" />
+    <result column="guessgold" jdbcType="INTEGER" property="guessgold" />
+    <result column="tiger_symbol" jdbcType="INTEGER" property="tigerSymbol" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, open_id, sid, name, icon, maxFightPower, gmLevel, cheatTimes, banned_ChatExpiredTime, 
+    banned_LoginExpiredTime, bannedTimes, lastLogin, lastLogout, online_update, totalRecharge, 
+    vipExp, vipLevel, lv, exp, crystal, gold, dungeon_lv, dungeon_time, ext_package, 
+    createTime, GmMailCheckId, strengthen_material, gem_material, star_material, mer_material, 
+    wing_material, arena_token, equip_instance_material, gem_instance_material, meridian_instance_material, 
+    lingbao_instance_material, wing_instance_material, starinfo_instance_material, red_piece, 
+    artifice_material, lottery, warspirit_talent_material, warspirit_lv_material, warspirit_lv, 
+    warspirit_exp, warspirit_talent, vicegeneral_decomposition, vicegeneral_drawCard, 
+    copyCent, civilWarCent, GuildForage, dress_material, exp_material, rebirth, rebirthExp, 
+    preMainTaskId, curMainTaskCompleteCount, microRewardState, viceGeneratanceMaterial, 
+    viceGeneratanceInstanceTime, title_0, title_1, title_2, clientData_0, clientData_1, 
+    clientData_2, clientData_3, clientData_4, clientData_5, clientData_6, clientData_7, 
+    clientData_8, clientData_9, guessgold, tiger_symbol
+  </sql>
+  <select id="selectByExample" parameterType="com.example.bean.PlayerExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from player
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from player
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from player
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.example.bean.PlayerExample">
+    delete from player
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.example.bean.Player">
+    insert into player (id, open_id, sid, 
+      name, icon, maxFightPower, 
+      gmLevel, cheatTimes, banned_ChatExpiredTime, 
+      banned_LoginExpiredTime, bannedTimes, lastLogin, 
+      lastLogout, online_update, totalRecharge, 
+      vipExp, vipLevel, lv, 
+      exp, crystal, gold, 
+      dungeon_lv, dungeon_time, ext_package, 
+      createTime, GmMailCheckId, strengthen_material, 
+      gem_material, star_material, mer_material, 
+      wing_material, arena_token, equip_instance_material, 
+      gem_instance_material, meridian_instance_material, 
+      lingbao_instance_material, wing_instance_material, 
+      starinfo_instance_material, red_piece, artifice_material, 
+      lottery, warspirit_talent_material, warspirit_lv_material, 
+      warspirit_lv, warspirit_exp, warspirit_talent, 
+      vicegeneral_decomposition, vicegeneral_drawCard, 
+      copyCent, civilWarCent, GuildForage, 
+      dress_material, exp_material, rebirth, 
+      rebirthExp, preMainTaskId, curMainTaskCompleteCount, 
+      microRewardState, viceGeneratanceMaterial, 
+      viceGeneratanceInstanceTime, title_0, title_1, 
+      title_2, clientData_0, clientData_1, 
+      clientData_2, clientData_3, clientData_4, 
+      clientData_5, clientData_6, clientData_7, 
+      clientData_8, clientData_9, guessgold, 
+      tiger_symbol)
+    values (#{id,jdbcType=BIGINT}, #{openId,jdbcType=VARCHAR}, #{sid,jdbcType=INTEGER}, 
+      #{name,jdbcType=VARCHAR}, #{icon,jdbcType=INTEGER}, #{maxfightpower,jdbcType=INTEGER}, 
+      #{gmlevel,jdbcType=INTEGER}, #{cheattimes,jdbcType=INTEGER}, #{bannedChatexpiredtime,jdbcType=INTEGER}, 
+      #{bannedLoginexpiredtime,jdbcType=INTEGER}, #{bannedtimes,jdbcType=INTEGER}, #{lastlogin,jdbcType=INTEGER}, 
+      #{lastlogout,jdbcType=INTEGER}, #{onlineUpdate,jdbcType=INTEGER}, #{totalrecharge,jdbcType=INTEGER}, 
+      #{vipexp,jdbcType=INTEGER}, #{viplevel,jdbcType=INTEGER}, #{lv,jdbcType=INTEGER}, 
+      #{exp,jdbcType=INTEGER}, #{crystal,jdbcType=INTEGER}, #{gold,jdbcType=INTEGER}, 
+      #{dungeonLv,jdbcType=INTEGER}, #{dungeonTime,jdbcType=INTEGER}, #{extPackage,jdbcType=INTEGER}, 
+      #{createtime,jdbcType=INTEGER}, #{gmmailcheckid,jdbcType=BIGINT}, #{strengthenMaterial,jdbcType=INTEGER}, 
+      #{gemMaterial,jdbcType=INTEGER}, #{starMaterial,jdbcType=INTEGER}, #{merMaterial,jdbcType=INTEGER}, 
+      #{wingMaterial,jdbcType=INTEGER}, #{arenaToken,jdbcType=INTEGER}, #{equipInstanceMaterial,jdbcType=INTEGER}, 
+      #{gemInstanceMaterial,jdbcType=INTEGER}, #{meridianInstanceMaterial,jdbcType=INTEGER}, 
+      #{lingbaoInstanceMaterial,jdbcType=INTEGER}, #{wingInstanceMaterial,jdbcType=INTEGER}, 
+      #{starinfoInstanceMaterial,jdbcType=INTEGER}, #{redPiece,jdbcType=INTEGER}, #{artificeMaterial,jdbcType=INTEGER}, 
+      #{lottery,jdbcType=INTEGER}, #{warspiritTalentMaterial,jdbcType=INTEGER}, #{warspiritLvMaterial,jdbcType=INTEGER}, 
+      #{warspiritLv,jdbcType=INTEGER}, #{warspiritExp,jdbcType=INTEGER}, #{warspiritTalent,jdbcType=INTEGER}, 
+      #{vicegeneralDecomposition,jdbcType=INTEGER}, #{vicegeneralDrawcard,jdbcType=INTEGER}, 
+      #{copycent,jdbcType=INTEGER}, #{civilwarcent,jdbcType=INTEGER}, #{guildforage,jdbcType=INTEGER}, 
+      #{dressMaterial,jdbcType=INTEGER}, #{expMaterial,jdbcType=INTEGER}, #{rebirth,jdbcType=INTEGER}, 
+      #{rebirthexp,jdbcType=INTEGER}, #{premaintaskid,jdbcType=INTEGER}, #{curmaintaskcompletecount,jdbcType=INTEGER}, 
+      #{microrewardstate,jdbcType=INTEGER}, #{vicegeneratancematerial,jdbcType=INTEGER}, 
+      #{vicegeneratanceinstancetime,jdbcType=INTEGER}, #{title0,jdbcType=INTEGER}, #{title1,jdbcType=INTEGER}, 
+      #{title2,jdbcType=INTEGER}, #{clientdata0,jdbcType=INTEGER}, #{clientdata1,jdbcType=INTEGER}, 
+      #{clientdata2,jdbcType=INTEGER}, #{clientdata3,jdbcType=INTEGER}, #{clientdata4,jdbcType=INTEGER}, 
+      #{clientdata5,jdbcType=INTEGER}, #{clientdata6,jdbcType=INTEGER}, #{clientdata7,jdbcType=INTEGER}, 
+      #{clientdata8,jdbcType=INTEGER}, #{clientdata9,jdbcType=INTEGER}, #{guessgold,jdbcType=INTEGER}, 
+      #{tigerSymbol,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.bean.Player">
+    insert into player
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="openId != null">
+        open_id,
+      </if>
+      <if test="sid != null">
+        sid,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="icon != null">
+        icon,
+      </if>
+      <if test="maxfightpower != null">
+        maxFightPower,
+      </if>
+      <if test="gmlevel != null">
+        gmLevel,
+      </if>
+      <if test="cheattimes != null">
+        cheatTimes,
+      </if>
+      <if test="bannedChatexpiredtime != null">
+        banned_ChatExpiredTime,
+      </if>
+      <if test="bannedLoginexpiredtime != null">
+        banned_LoginExpiredTime,
+      </if>
+      <if test="bannedtimes != null">
+        bannedTimes,
+      </if>
+      <if test="lastlogin != null">
+        lastLogin,
+      </if>
+      <if test="lastlogout != null">
+        lastLogout,
+      </if>
+      <if test="onlineUpdate != null">
+        online_update,
+      </if>
+      <if test="totalrecharge != null">
+        totalRecharge,
+      </if>
+      <if test="vipexp != null">
+        vipExp,
+      </if>
+      <if test="viplevel != null">
+        vipLevel,
+      </if>
+      <if test="lv != null">
+        lv,
+      </if>
+      <if test="exp != null">
+        exp,
+      </if>
+      <if test="crystal != null">
+        crystal,
+      </if>
+      <if test="gold != null">
+        gold,
+      </if>
+      <if test="dungeonLv != null">
+        dungeon_lv,
+      </if>
+      <if test="dungeonTime != null">
+        dungeon_time,
+      </if>
+      <if test="extPackage != null">
+        ext_package,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="gmmailcheckid != null">
+        GmMailCheckId,
+      </if>
+      <if test="strengthenMaterial != null">
+        strengthen_material,
+      </if>
+      <if test="gemMaterial != null">
+        gem_material,
+      </if>
+      <if test="starMaterial != null">
+        star_material,
+      </if>
+      <if test="merMaterial != null">
+        mer_material,
+      </if>
+      <if test="wingMaterial != null">
+        wing_material,
+      </if>
+      <if test="arenaToken != null">
+        arena_token,
+      </if>
+      <if test="equipInstanceMaterial != null">
+        equip_instance_material,
+      </if>
+      <if test="gemInstanceMaterial != null">
+        gem_instance_material,
+      </if>
+      <if test="meridianInstanceMaterial != null">
+        meridian_instance_material,
+      </if>
+      <if test="lingbaoInstanceMaterial != null">
+        lingbao_instance_material,
+      </if>
+      <if test="wingInstanceMaterial != null">
+        wing_instance_material,
+      </if>
+      <if test="starinfoInstanceMaterial != null">
+        starinfo_instance_material,
+      </if>
+      <if test="redPiece != null">
+        red_piece,
+      </if>
+      <if test="artificeMaterial != null">
+        artifice_material,
+      </if>
+      <if test="lottery != null">
+        lottery,
+      </if>
+      <if test="warspiritTalentMaterial != null">
+        warspirit_talent_material,
+      </if>
+      <if test="warspiritLvMaterial != null">
+        warspirit_lv_material,
+      </if>
+      <if test="warspiritLv != null">
+        warspirit_lv,
+      </if>
+      <if test="warspiritExp != null">
+        warspirit_exp,
+      </if>
+      <if test="warspiritTalent != null">
+        warspirit_talent,
+      </if>
+      <if test="vicegeneralDecomposition != null">
+        vicegeneral_decomposition,
+      </if>
+      <if test="vicegeneralDrawcard != null">
+        vicegeneral_drawCard,
+      </if>
+      <if test="copycent != null">
+        copyCent,
+      </if>
+      <if test="civilwarcent != null">
+        civilWarCent,
+      </if>
+      <if test="guildforage != null">
+        GuildForage,
+      </if>
+      <if test="dressMaterial != null">
+        dress_material,
+      </if>
+      <if test="expMaterial != null">
+        exp_material,
+      </if>
+      <if test="rebirth != null">
+        rebirth,
+      </if>
+      <if test="rebirthexp != null">
+        rebirthExp,
+      </if>
+      <if test="premaintaskid != null">
+        preMainTaskId,
+      </if>
+      <if test="curmaintaskcompletecount != null">
+        curMainTaskCompleteCount,
+      </if>
+      <if test="microrewardstate != null">
+        microRewardState,
+      </if>
+      <if test="vicegeneratancematerial != null">
+        viceGeneratanceMaterial,
+      </if>
+      <if test="vicegeneratanceinstancetime != null">
+        viceGeneratanceInstanceTime,
+      </if>
+      <if test="title0 != null">
+        title_0,
+      </if>
+      <if test="title1 != null">
+        title_1,
+      </if>
+      <if test="title2 != null">
+        title_2,
+      </if>
+      <if test="clientdata0 != null">
+        clientData_0,
+      </if>
+      <if test="clientdata1 != null">
+        clientData_1,
+      </if>
+      <if test="clientdata2 != null">
+        clientData_2,
+      </if>
+      <if test="clientdata3 != null">
+        clientData_3,
+      </if>
+      <if test="clientdata4 != null">
+        clientData_4,
+      </if>
+      <if test="clientdata5 != null">
+        clientData_5,
+      </if>
+      <if test="clientdata6 != null">
+        clientData_6,
+      </if>
+      <if test="clientdata7 != null">
+        clientData_7,
+      </if>
+      <if test="clientdata8 != null">
+        clientData_8,
+      </if>
+      <if test="clientdata9 != null">
+        clientData_9,
+      </if>
+      <if test="guessgold != null">
+        guessgold,
+      </if>
+      <if test="tigerSymbol != null">
+        tiger_symbol,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="openId != null">
+        #{openId,jdbcType=VARCHAR},
+      </if>
+      <if test="sid != null">
+        #{sid,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null">
+        #{icon,jdbcType=INTEGER},
+      </if>
+      <if test="maxfightpower != null">
+        #{maxfightpower,jdbcType=INTEGER},
+      </if>
+      <if test="gmlevel != null">
+        #{gmlevel,jdbcType=INTEGER},
+      </if>
+      <if test="cheattimes != null">
+        #{cheattimes,jdbcType=INTEGER},
+      </if>
+      <if test="bannedChatexpiredtime != null">
+        #{bannedChatexpiredtime,jdbcType=INTEGER},
+      </if>
+      <if test="bannedLoginexpiredtime != null">
+        #{bannedLoginexpiredtime,jdbcType=INTEGER},
+      </if>
+      <if test="bannedtimes != null">
+        #{bannedtimes,jdbcType=INTEGER},
+      </if>
+      <if test="lastlogin != null">
+        #{lastlogin,jdbcType=INTEGER},
+      </if>
+      <if test="lastlogout != null">
+        #{lastlogout,jdbcType=INTEGER},
+      </if>
+      <if test="onlineUpdate != null">
+        #{onlineUpdate,jdbcType=INTEGER},
+      </if>
+      <if test="totalrecharge != null">
+        #{totalrecharge,jdbcType=INTEGER},
+      </if>
+      <if test="vipexp != null">
+        #{vipexp,jdbcType=INTEGER},
+      </if>
+      <if test="viplevel != null">
+        #{viplevel,jdbcType=INTEGER},
+      </if>
+      <if test="lv != null">
+        #{lv,jdbcType=INTEGER},
+      </if>
+      <if test="exp != null">
+        #{exp,jdbcType=INTEGER},
+      </if>
+      <if test="crystal != null">
+        #{crystal,jdbcType=INTEGER},
+      </if>
+      <if test="gold != null">
+        #{gold,jdbcType=INTEGER},
+      </if>
+      <if test="dungeonLv != null">
+        #{dungeonLv,jdbcType=INTEGER},
+      </if>
+      <if test="dungeonTime != null">
+        #{dungeonTime,jdbcType=INTEGER},
+      </if>
+      <if test="extPackage != null">
+        #{extPackage,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=INTEGER},
+      </if>
+      <if test="gmmailcheckid != null">
+        #{gmmailcheckid,jdbcType=BIGINT},
+      </if>
+      <if test="strengthenMaterial != null">
+        #{strengthenMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="gemMaterial != null">
+        #{gemMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="starMaterial != null">
+        #{starMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="merMaterial != null">
+        #{merMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="wingMaterial != null">
+        #{wingMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="arenaToken != null">
+        #{arenaToken,jdbcType=INTEGER},
+      </if>
+      <if test="equipInstanceMaterial != null">
+        #{equipInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="gemInstanceMaterial != null">
+        #{gemInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="meridianInstanceMaterial != null">
+        #{meridianInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="lingbaoInstanceMaterial != null">
+        #{lingbaoInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="wingInstanceMaterial != null">
+        #{wingInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="starinfoInstanceMaterial != null">
+        #{starinfoInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="redPiece != null">
+        #{redPiece,jdbcType=INTEGER},
+      </if>
+      <if test="artificeMaterial != null">
+        #{artificeMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="lottery != null">
+        #{lottery,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritTalentMaterial != null">
+        #{warspiritTalentMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritLvMaterial != null">
+        #{warspiritLvMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritLv != null">
+        #{warspiritLv,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritExp != null">
+        #{warspiritExp,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritTalent != null">
+        #{warspiritTalent,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneralDecomposition != null">
+        #{vicegeneralDecomposition,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneralDrawcard != null">
+        #{vicegeneralDrawcard,jdbcType=INTEGER},
+      </if>
+      <if test="copycent != null">
+        #{copycent,jdbcType=INTEGER},
+      </if>
+      <if test="civilwarcent != null">
+        #{civilwarcent,jdbcType=INTEGER},
+      </if>
+      <if test="guildforage != null">
+        #{guildforage,jdbcType=INTEGER},
+      </if>
+      <if test="dressMaterial != null">
+        #{dressMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="expMaterial != null">
+        #{expMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="rebirth != null">
+        #{rebirth,jdbcType=INTEGER},
+      </if>
+      <if test="rebirthexp != null">
+        #{rebirthexp,jdbcType=INTEGER},
+      </if>
+      <if test="premaintaskid != null">
+        #{premaintaskid,jdbcType=INTEGER},
+      </if>
+      <if test="curmaintaskcompletecount != null">
+        #{curmaintaskcompletecount,jdbcType=INTEGER},
+      </if>
+      <if test="microrewardstate != null">
+        #{microrewardstate,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneratancematerial != null">
+        #{vicegeneratancematerial,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneratanceinstancetime != null">
+        #{vicegeneratanceinstancetime,jdbcType=INTEGER},
+      </if>
+      <if test="title0 != null">
+        #{title0,jdbcType=INTEGER},
+      </if>
+      <if test="title1 != null">
+        #{title1,jdbcType=INTEGER},
+      </if>
+      <if test="title2 != null">
+        #{title2,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata0 != null">
+        #{clientdata0,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata1 != null">
+        #{clientdata1,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata2 != null">
+        #{clientdata2,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata3 != null">
+        #{clientdata3,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata4 != null">
+        #{clientdata4,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata5 != null">
+        #{clientdata5,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata6 != null">
+        #{clientdata6,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata7 != null">
+        #{clientdata7,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata8 != null">
+        #{clientdata8,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata9 != null">
+        #{clientdata9,jdbcType=INTEGER},
+      </if>
+      <if test="guessgold != null">
+        #{guessgold,jdbcType=INTEGER},
+      </if>
+      <if test="tigerSymbol != null">
+        #{tigerSymbol,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.example.bean.PlayerExample" resultType="java.lang.Long">
+    select count(*) from player
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update player
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.openId != null">
+        open_id = #{record.openId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sid != null">
+        sid = #{record.sid,jdbcType=INTEGER},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.icon != null">
+        icon = #{record.icon,jdbcType=INTEGER},
+      </if>
+      <if test="record.maxfightpower != null">
+        maxFightPower = #{record.maxfightpower,jdbcType=INTEGER},
+      </if>
+      <if test="record.gmlevel != null">
+        gmLevel = #{record.gmlevel,jdbcType=INTEGER},
+      </if>
+      <if test="record.cheattimes != null">
+        cheatTimes = #{record.cheattimes,jdbcType=INTEGER},
+      </if>
+      <if test="record.bannedChatexpiredtime != null">
+        banned_ChatExpiredTime = #{record.bannedChatexpiredtime,jdbcType=INTEGER},
+      </if>
+      <if test="record.bannedLoginexpiredtime != null">
+        banned_LoginExpiredTime = #{record.bannedLoginexpiredtime,jdbcType=INTEGER},
+      </if>
+      <if test="record.bannedtimes != null">
+        bannedTimes = #{record.bannedtimes,jdbcType=INTEGER},
+      </if>
+      <if test="record.lastlogin != null">
+        lastLogin = #{record.lastlogin,jdbcType=INTEGER},
+      </if>
+      <if test="record.lastlogout != null">
+        lastLogout = #{record.lastlogout,jdbcType=INTEGER},
+      </if>
+      <if test="record.onlineUpdate != null">
+        online_update = #{record.onlineUpdate,jdbcType=INTEGER},
+      </if>
+      <if test="record.totalrecharge != null">
+        totalRecharge = #{record.totalrecharge,jdbcType=INTEGER},
+      </if>
+      <if test="record.vipexp != null">
+        vipExp = #{record.vipexp,jdbcType=INTEGER},
+      </if>
+      <if test="record.viplevel != null">
+        vipLevel = #{record.viplevel,jdbcType=INTEGER},
+      </if>
+      <if test="record.lv != null">
+        lv = #{record.lv,jdbcType=INTEGER},
+      </if>
+      <if test="record.exp != null">
+        exp = #{record.exp,jdbcType=INTEGER},
+      </if>
+      <if test="record.crystal != null">
+        crystal = #{record.crystal,jdbcType=INTEGER},
+      </if>
+      <if test="record.gold != null">
+        gold = #{record.gold,jdbcType=INTEGER},
+      </if>
+      <if test="record.dungeonLv != null">
+        dungeon_lv = #{record.dungeonLv,jdbcType=INTEGER},
+      </if>
+      <if test="record.dungeonTime != null">
+        dungeon_time = #{record.dungeonTime,jdbcType=INTEGER},
+      </if>
+      <if test="record.extPackage != null">
+        ext_package = #{record.extPackage,jdbcType=INTEGER},
+      </if>
+      <if test="record.createtime != null">
+        createTime = #{record.createtime,jdbcType=INTEGER},
+      </if>
+      <if test="record.gmmailcheckid != null">
+        GmMailCheckId = #{record.gmmailcheckid,jdbcType=BIGINT},
+      </if>
+      <if test="record.strengthenMaterial != null">
+        strengthen_material = #{record.strengthenMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.gemMaterial != null">
+        gem_material = #{record.gemMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.starMaterial != null">
+        star_material = #{record.starMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.merMaterial != null">
+        mer_material = #{record.merMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.wingMaterial != null">
+        wing_material = #{record.wingMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.arenaToken != null">
+        arena_token = #{record.arenaToken,jdbcType=INTEGER},
+      </if>
+      <if test="record.equipInstanceMaterial != null">
+        equip_instance_material = #{record.equipInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.gemInstanceMaterial != null">
+        gem_instance_material = #{record.gemInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.meridianInstanceMaterial != null">
+        meridian_instance_material = #{record.meridianInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.lingbaoInstanceMaterial != null">
+        lingbao_instance_material = #{record.lingbaoInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.wingInstanceMaterial != null">
+        wing_instance_material = #{record.wingInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.starinfoInstanceMaterial != null">
+        starinfo_instance_material = #{record.starinfoInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.redPiece != null">
+        red_piece = #{record.redPiece,jdbcType=INTEGER},
+      </if>
+      <if test="record.artificeMaterial != null">
+        artifice_material = #{record.artificeMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.lottery != null">
+        lottery = #{record.lottery,jdbcType=INTEGER},
+      </if>
+      <if test="record.warspiritTalentMaterial != null">
+        warspirit_talent_material = #{record.warspiritTalentMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.warspiritLvMaterial != null">
+        warspirit_lv_material = #{record.warspiritLvMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.warspiritLv != null">
+        warspirit_lv = #{record.warspiritLv,jdbcType=INTEGER},
+      </if>
+      <if test="record.warspiritExp != null">
+        warspirit_exp = #{record.warspiritExp,jdbcType=INTEGER},
+      </if>
+      <if test="record.warspiritTalent != null">
+        warspirit_talent = #{record.warspiritTalent,jdbcType=INTEGER},
+      </if>
+      <if test="record.vicegeneralDecomposition != null">
+        vicegeneral_decomposition = #{record.vicegeneralDecomposition,jdbcType=INTEGER},
+      </if>
+      <if test="record.vicegeneralDrawcard != null">
+        vicegeneral_drawCard = #{record.vicegeneralDrawcard,jdbcType=INTEGER},
+      </if>
+      <if test="record.copycent != null">
+        copyCent = #{record.copycent,jdbcType=INTEGER},
+      </if>
+      <if test="record.civilwarcent != null">
+        civilWarCent = #{record.civilwarcent,jdbcType=INTEGER},
+      </if>
+      <if test="record.guildforage != null">
+        GuildForage = #{record.guildforage,jdbcType=INTEGER},
+      </if>
+      <if test="record.dressMaterial != null">
+        dress_material = #{record.dressMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.expMaterial != null">
+        exp_material = #{record.expMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.rebirth != null">
+        rebirth = #{record.rebirth,jdbcType=INTEGER},
+      </if>
+      <if test="record.rebirthexp != null">
+        rebirthExp = #{record.rebirthexp,jdbcType=INTEGER},
+      </if>
+      <if test="record.premaintaskid != null">
+        preMainTaskId = #{record.premaintaskid,jdbcType=INTEGER},
+      </if>
+      <if test="record.curmaintaskcompletecount != null">
+        curMainTaskCompleteCount = #{record.curmaintaskcompletecount,jdbcType=INTEGER},
+      </if>
+      <if test="record.microrewardstate != null">
+        microRewardState = #{record.microrewardstate,jdbcType=INTEGER},
+      </if>
+      <if test="record.vicegeneratancematerial != null">
+        viceGeneratanceMaterial = #{record.vicegeneratancematerial,jdbcType=INTEGER},
+      </if>
+      <if test="record.vicegeneratanceinstancetime != null">
+        viceGeneratanceInstanceTime = #{record.vicegeneratanceinstancetime,jdbcType=INTEGER},
+      </if>
+      <if test="record.title0 != null">
+        title_0 = #{record.title0,jdbcType=INTEGER},
+      </if>
+      <if test="record.title1 != null">
+        title_1 = #{record.title1,jdbcType=INTEGER},
+      </if>
+      <if test="record.title2 != null">
+        title_2 = #{record.title2,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata0 != null">
+        clientData_0 = #{record.clientdata0,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata1 != null">
+        clientData_1 = #{record.clientdata1,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata2 != null">
+        clientData_2 = #{record.clientdata2,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata3 != null">
+        clientData_3 = #{record.clientdata3,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata4 != null">
+        clientData_4 = #{record.clientdata4,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata5 != null">
+        clientData_5 = #{record.clientdata5,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata6 != null">
+        clientData_6 = #{record.clientdata6,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata7 != null">
+        clientData_7 = #{record.clientdata7,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata8 != null">
+        clientData_8 = #{record.clientdata8,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata9 != null">
+        clientData_9 = #{record.clientdata9,jdbcType=INTEGER},
+      </if>
+      <if test="record.guessgold != null">
+        guessgold = #{record.guessgold,jdbcType=INTEGER},
+      </if>
+      <if test="record.tigerSymbol != null">
+        tiger_symbol = #{record.tigerSymbol,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update player
+    set id = #{record.id,jdbcType=BIGINT},
+      open_id = #{record.openId,jdbcType=VARCHAR},
+      sid = #{record.sid,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
+      icon = #{record.icon,jdbcType=INTEGER},
+      maxFightPower = #{record.maxfightpower,jdbcType=INTEGER},
+      gmLevel = #{record.gmlevel,jdbcType=INTEGER},
+      cheatTimes = #{record.cheattimes,jdbcType=INTEGER},
+      banned_ChatExpiredTime = #{record.bannedChatexpiredtime,jdbcType=INTEGER},
+      banned_LoginExpiredTime = #{record.bannedLoginexpiredtime,jdbcType=INTEGER},
+      bannedTimes = #{record.bannedtimes,jdbcType=INTEGER},
+      lastLogin = #{record.lastlogin,jdbcType=INTEGER},
+      lastLogout = #{record.lastlogout,jdbcType=INTEGER},
+      online_update = #{record.onlineUpdate,jdbcType=INTEGER},
+      totalRecharge = #{record.totalrecharge,jdbcType=INTEGER},
+      vipExp = #{record.vipexp,jdbcType=INTEGER},
+      vipLevel = #{record.viplevel,jdbcType=INTEGER},
+      lv = #{record.lv,jdbcType=INTEGER},
+      exp = #{record.exp,jdbcType=INTEGER},
+      crystal = #{record.crystal,jdbcType=INTEGER},
+      gold = #{record.gold,jdbcType=INTEGER},
+      dungeon_lv = #{record.dungeonLv,jdbcType=INTEGER},
+      dungeon_time = #{record.dungeonTime,jdbcType=INTEGER},
+      ext_package = #{record.extPackage,jdbcType=INTEGER},
+      createTime = #{record.createtime,jdbcType=INTEGER},
+      GmMailCheckId = #{record.gmmailcheckid,jdbcType=BIGINT},
+      strengthen_material = #{record.strengthenMaterial,jdbcType=INTEGER},
+      gem_material = #{record.gemMaterial,jdbcType=INTEGER},
+      star_material = #{record.starMaterial,jdbcType=INTEGER},
+      mer_material = #{record.merMaterial,jdbcType=INTEGER},
+      wing_material = #{record.wingMaterial,jdbcType=INTEGER},
+      arena_token = #{record.arenaToken,jdbcType=INTEGER},
+      equip_instance_material = #{record.equipInstanceMaterial,jdbcType=INTEGER},
+      gem_instance_material = #{record.gemInstanceMaterial,jdbcType=INTEGER},
+      meridian_instance_material = #{record.meridianInstanceMaterial,jdbcType=INTEGER},
+      lingbao_instance_material = #{record.lingbaoInstanceMaterial,jdbcType=INTEGER},
+      wing_instance_material = #{record.wingInstanceMaterial,jdbcType=INTEGER},
+      starinfo_instance_material = #{record.starinfoInstanceMaterial,jdbcType=INTEGER},
+      red_piece = #{record.redPiece,jdbcType=INTEGER},
+      artifice_material = #{record.artificeMaterial,jdbcType=INTEGER},
+      lottery = #{record.lottery,jdbcType=INTEGER},
+      warspirit_talent_material = #{record.warspiritTalentMaterial,jdbcType=INTEGER},
+      warspirit_lv_material = #{record.warspiritLvMaterial,jdbcType=INTEGER},
+      warspirit_lv = #{record.warspiritLv,jdbcType=INTEGER},
+      warspirit_exp = #{record.warspiritExp,jdbcType=INTEGER},
+      warspirit_talent = #{record.warspiritTalent,jdbcType=INTEGER},
+      vicegeneral_decomposition = #{record.vicegeneralDecomposition,jdbcType=INTEGER},
+      vicegeneral_drawCard = #{record.vicegeneralDrawcard,jdbcType=INTEGER},
+      copyCent = #{record.copycent,jdbcType=INTEGER},
+      civilWarCent = #{record.civilwarcent,jdbcType=INTEGER},
+      GuildForage = #{record.guildforage,jdbcType=INTEGER},
+      dress_material = #{record.dressMaterial,jdbcType=INTEGER},
+      exp_material = #{record.expMaterial,jdbcType=INTEGER},
+      rebirth = #{record.rebirth,jdbcType=INTEGER},
+      rebirthExp = #{record.rebirthexp,jdbcType=INTEGER},
+      preMainTaskId = #{record.premaintaskid,jdbcType=INTEGER},
+      curMainTaskCompleteCount = #{record.curmaintaskcompletecount,jdbcType=INTEGER},
+      microRewardState = #{record.microrewardstate,jdbcType=INTEGER},
+      viceGeneratanceMaterial = #{record.vicegeneratancematerial,jdbcType=INTEGER},
+      viceGeneratanceInstanceTime = #{record.vicegeneratanceinstancetime,jdbcType=INTEGER},
+      title_0 = #{record.title0,jdbcType=INTEGER},
+      title_1 = #{record.title1,jdbcType=INTEGER},
+      title_2 = #{record.title2,jdbcType=INTEGER},
+      clientData_0 = #{record.clientdata0,jdbcType=INTEGER},
+      clientData_1 = #{record.clientdata1,jdbcType=INTEGER},
+      clientData_2 = #{record.clientdata2,jdbcType=INTEGER},
+      clientData_3 = #{record.clientdata3,jdbcType=INTEGER},
+      clientData_4 = #{record.clientdata4,jdbcType=INTEGER},
+      clientData_5 = #{record.clientdata5,jdbcType=INTEGER},
+      clientData_6 = #{record.clientdata6,jdbcType=INTEGER},
+      clientData_7 = #{record.clientdata7,jdbcType=INTEGER},
+      clientData_8 = #{record.clientdata8,jdbcType=INTEGER},
+      clientData_9 = #{record.clientdata9,jdbcType=INTEGER},
+      guessgold = #{record.guessgold,jdbcType=INTEGER},
+      tiger_symbol = #{record.tigerSymbol,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.bean.Player">
+    update player
+    <set>
+      <if test="openId != null">
+        open_id = #{openId,jdbcType=VARCHAR},
+      </if>
+      <if test="sid != null">
+        sid = #{sid,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null">
+        icon = #{icon,jdbcType=INTEGER},
+      </if>
+      <if test="maxfightpower != null">
+        maxFightPower = #{maxfightpower,jdbcType=INTEGER},
+      </if>
+      <if test="gmlevel != null">
+        gmLevel = #{gmlevel,jdbcType=INTEGER},
+      </if>
+      <if test="cheattimes != null">
+        cheatTimes = #{cheattimes,jdbcType=INTEGER},
+      </if>
+      <if test="bannedChatexpiredtime != null">
+        banned_ChatExpiredTime = #{bannedChatexpiredtime,jdbcType=INTEGER},
+      </if>
+      <if test="bannedLoginexpiredtime != null">
+        banned_LoginExpiredTime = #{bannedLoginexpiredtime,jdbcType=INTEGER},
+      </if>
+      <if test="bannedtimes != null">
+        bannedTimes = #{bannedtimes,jdbcType=INTEGER},
+      </if>
+      <if test="lastlogin != null">
+        lastLogin = #{lastlogin,jdbcType=INTEGER},
+      </if>
+      <if test="lastlogout != null">
+        lastLogout = #{lastlogout,jdbcType=INTEGER},
+      </if>
+      <if test="onlineUpdate != null">
+        online_update = #{onlineUpdate,jdbcType=INTEGER},
+      </if>
+      <if test="totalrecharge != null">
+        totalRecharge = #{totalrecharge,jdbcType=INTEGER},
+      </if>
+      <if test="vipexp != null">
+        vipExp = #{vipexp,jdbcType=INTEGER},
+      </if>
+      <if test="viplevel != null">
+        vipLevel = #{viplevel,jdbcType=INTEGER},
+      </if>
+      <if test="lv != null">
+        lv = #{lv,jdbcType=INTEGER},
+      </if>
+      <if test="exp != null">
+        exp = #{exp,jdbcType=INTEGER},
+      </if>
+      <if test="crystal != null">
+        crystal = #{crystal,jdbcType=INTEGER},
+      </if>
+      <if test="gold != null">
+        gold = #{gold,jdbcType=INTEGER},
+      </if>
+      <if test="dungeonLv != null">
+        dungeon_lv = #{dungeonLv,jdbcType=INTEGER},
+      </if>
+      <if test="dungeonTime != null">
+        dungeon_time = #{dungeonTime,jdbcType=INTEGER},
+      </if>
+      <if test="extPackage != null">
+        ext_package = #{extPackage,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=INTEGER},
+      </if>
+      <if test="gmmailcheckid != null">
+        GmMailCheckId = #{gmmailcheckid,jdbcType=BIGINT},
+      </if>
+      <if test="strengthenMaterial != null">
+        strengthen_material = #{strengthenMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="gemMaterial != null">
+        gem_material = #{gemMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="starMaterial != null">
+        star_material = #{starMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="merMaterial != null">
+        mer_material = #{merMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="wingMaterial != null">
+        wing_material = #{wingMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="arenaToken != null">
+        arena_token = #{arenaToken,jdbcType=INTEGER},
+      </if>
+      <if test="equipInstanceMaterial != null">
+        equip_instance_material = #{equipInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="gemInstanceMaterial != null">
+        gem_instance_material = #{gemInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="meridianInstanceMaterial != null">
+        meridian_instance_material = #{meridianInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="lingbaoInstanceMaterial != null">
+        lingbao_instance_material = #{lingbaoInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="wingInstanceMaterial != null">
+        wing_instance_material = #{wingInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="starinfoInstanceMaterial != null">
+        starinfo_instance_material = #{starinfoInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="redPiece != null">
+        red_piece = #{redPiece,jdbcType=INTEGER},
+      </if>
+      <if test="artificeMaterial != null">
+        artifice_material = #{artificeMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="lottery != null">
+        lottery = #{lottery,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritTalentMaterial != null">
+        warspirit_talent_material = #{warspiritTalentMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritLvMaterial != null">
+        warspirit_lv_material = #{warspiritLvMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritLv != null">
+        warspirit_lv = #{warspiritLv,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritExp != null">
+        warspirit_exp = #{warspiritExp,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritTalent != null">
+        warspirit_talent = #{warspiritTalent,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneralDecomposition != null">
+        vicegeneral_decomposition = #{vicegeneralDecomposition,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneralDrawcard != null">
+        vicegeneral_drawCard = #{vicegeneralDrawcard,jdbcType=INTEGER},
+      </if>
+      <if test="copycent != null">
+        copyCent = #{copycent,jdbcType=INTEGER},
+      </if>
+      <if test="civilwarcent != null">
+        civilWarCent = #{civilwarcent,jdbcType=INTEGER},
+      </if>
+      <if test="guildforage != null">
+        GuildForage = #{guildforage,jdbcType=INTEGER},
+      </if>
+      <if test="dressMaterial != null">
+        dress_material = #{dressMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="expMaterial != null">
+        exp_material = #{expMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="rebirth != null">
+        rebirth = #{rebirth,jdbcType=INTEGER},
+      </if>
+      <if test="rebirthexp != null">
+        rebirthExp = #{rebirthexp,jdbcType=INTEGER},
+      </if>
+      <if test="premaintaskid != null">
+        preMainTaskId = #{premaintaskid,jdbcType=INTEGER},
+      </if>
+      <if test="curmaintaskcompletecount != null">
+        curMainTaskCompleteCount = #{curmaintaskcompletecount,jdbcType=INTEGER},
+      </if>
+      <if test="microrewardstate != null">
+        microRewardState = #{microrewardstate,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneratancematerial != null">
+        viceGeneratanceMaterial = #{vicegeneratancematerial,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneratanceinstancetime != null">
+        viceGeneratanceInstanceTime = #{vicegeneratanceinstancetime,jdbcType=INTEGER},
+      </if>
+      <if test="title0 != null">
+        title_0 = #{title0,jdbcType=INTEGER},
+      </if>
+      <if test="title1 != null">
+        title_1 = #{title1,jdbcType=INTEGER},
+      </if>
+      <if test="title2 != null">
+        title_2 = #{title2,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata0 != null">
+        clientData_0 = #{clientdata0,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata1 != null">
+        clientData_1 = #{clientdata1,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata2 != null">
+        clientData_2 = #{clientdata2,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata3 != null">
+        clientData_3 = #{clientdata3,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata4 != null">
+        clientData_4 = #{clientdata4,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata5 != null">
+        clientData_5 = #{clientdata5,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata6 != null">
+        clientData_6 = #{clientdata6,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata7 != null">
+        clientData_7 = #{clientdata7,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata8 != null">
+        clientData_8 = #{clientdata8,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata9 != null">
+        clientData_9 = #{clientdata9,jdbcType=INTEGER},
+      </if>
+      <if test="guessgold != null">
+        guessgold = #{guessgold,jdbcType=INTEGER},
+      </if>
+      <if test="tigerSymbol != null">
+        tiger_symbol = #{tigerSymbol,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.bean.Player">
+    update player
+    set open_id = #{openId,jdbcType=VARCHAR},
+      sid = #{sid,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR},
+      icon = #{icon,jdbcType=INTEGER},
+      maxFightPower = #{maxfightpower,jdbcType=INTEGER},
+      gmLevel = #{gmlevel,jdbcType=INTEGER},
+      cheatTimes = #{cheattimes,jdbcType=INTEGER},
+      banned_ChatExpiredTime = #{bannedChatexpiredtime,jdbcType=INTEGER},
+      banned_LoginExpiredTime = #{bannedLoginexpiredtime,jdbcType=INTEGER},
+      bannedTimes = #{bannedtimes,jdbcType=INTEGER},
+      lastLogin = #{lastlogin,jdbcType=INTEGER},
+      lastLogout = #{lastlogout,jdbcType=INTEGER},
+      online_update = #{onlineUpdate,jdbcType=INTEGER},
+      totalRecharge = #{totalrecharge,jdbcType=INTEGER},
+      vipExp = #{vipexp,jdbcType=INTEGER},
+      vipLevel = #{viplevel,jdbcType=INTEGER},
+      lv = #{lv,jdbcType=INTEGER},
+      exp = #{exp,jdbcType=INTEGER},
+      crystal = #{crystal,jdbcType=INTEGER},
+      gold = #{gold,jdbcType=INTEGER},
+      dungeon_lv = #{dungeonLv,jdbcType=INTEGER},
+      dungeon_time = #{dungeonTime,jdbcType=INTEGER},
+      ext_package = #{extPackage,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=INTEGER},
+      GmMailCheckId = #{gmmailcheckid,jdbcType=BIGINT},
+      strengthen_material = #{strengthenMaterial,jdbcType=INTEGER},
+      gem_material = #{gemMaterial,jdbcType=INTEGER},
+      star_material = #{starMaterial,jdbcType=INTEGER},
+      mer_material = #{merMaterial,jdbcType=INTEGER},
+      wing_material = #{wingMaterial,jdbcType=INTEGER},
+      arena_token = #{arenaToken,jdbcType=INTEGER},
+      equip_instance_material = #{equipInstanceMaterial,jdbcType=INTEGER},
+      gem_instance_material = #{gemInstanceMaterial,jdbcType=INTEGER},
+      meridian_instance_material = #{meridianInstanceMaterial,jdbcType=INTEGER},
+      lingbao_instance_material = #{lingbaoInstanceMaterial,jdbcType=INTEGER},
+      wing_instance_material = #{wingInstanceMaterial,jdbcType=INTEGER},
+      starinfo_instance_material = #{starinfoInstanceMaterial,jdbcType=INTEGER},
+      red_piece = #{redPiece,jdbcType=INTEGER},
+      artifice_material = #{artificeMaterial,jdbcType=INTEGER},
+      lottery = #{lottery,jdbcType=INTEGER},
+      warspirit_talent_material = #{warspiritTalentMaterial,jdbcType=INTEGER},
+      warspirit_lv_material = #{warspiritLvMaterial,jdbcType=INTEGER},
+      warspirit_lv = #{warspiritLv,jdbcType=INTEGER},
+      warspirit_exp = #{warspiritExp,jdbcType=INTEGER},
+      warspirit_talent = #{warspiritTalent,jdbcType=INTEGER},
+      vicegeneral_decomposition = #{vicegeneralDecomposition,jdbcType=INTEGER},
+      vicegeneral_drawCard = #{vicegeneralDrawcard,jdbcType=INTEGER},
+      copyCent = #{copycent,jdbcType=INTEGER},
+      civilWarCent = #{civilwarcent,jdbcType=INTEGER},
+      GuildForage = #{guildforage,jdbcType=INTEGER},
+      dress_material = #{dressMaterial,jdbcType=INTEGER},
+      exp_material = #{expMaterial,jdbcType=INTEGER},
+      rebirth = #{rebirth,jdbcType=INTEGER},
+      rebirthExp = #{rebirthexp,jdbcType=INTEGER},
+      preMainTaskId = #{premaintaskid,jdbcType=INTEGER},
+      curMainTaskCompleteCount = #{curmaintaskcompletecount,jdbcType=INTEGER},
+      microRewardState = #{microrewardstate,jdbcType=INTEGER},
+      viceGeneratanceMaterial = #{vicegeneratancematerial,jdbcType=INTEGER},
+      viceGeneratanceInstanceTime = #{vicegeneratanceinstancetime,jdbcType=INTEGER},
+      title_0 = #{title0,jdbcType=INTEGER},
+      title_1 = #{title1,jdbcType=INTEGER},
+      title_2 = #{title2,jdbcType=INTEGER},
+      clientData_0 = #{clientdata0,jdbcType=INTEGER},
+      clientData_1 = #{clientdata1,jdbcType=INTEGER},
+      clientData_2 = #{clientdata2,jdbcType=INTEGER},
+      clientData_3 = #{clientdata3,jdbcType=INTEGER},
+      clientData_4 = #{clientdata4,jdbcType=INTEGER},
+      clientData_5 = #{clientdata5,jdbcType=INTEGER},
+      clientData_6 = #{clientdata6,jdbcType=INTEGER},
+      clientData_7 = #{clientdata7,jdbcType=INTEGER},
+      clientData_8 = #{clientdata8,jdbcType=INTEGER},
+      clientData_9 = #{clientdata9,jdbcType=INTEGER},
+      guessgold = #{guessgold,jdbcType=INTEGER},
+      tiger_symbol = #{tigerSymbol,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.bean.Player">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+    <result column="sid" jdbcType="INTEGER" property="sid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="icon" jdbcType="INTEGER" property="icon" />
+    <result column="maxFightPower" jdbcType="INTEGER" property="maxfightpower" />
+    <result column="gmLevel" jdbcType="INTEGER" property="gmlevel" />
+    <result column="cheatTimes" jdbcType="INTEGER" property="cheattimes" />
+    <result column="banned_ChatExpiredTime" jdbcType="INTEGER" property="bannedChatexpiredtime" />
+    <result column="banned_LoginExpiredTime" jdbcType="INTEGER" property="bannedLoginexpiredtime" />
+    <result column="bannedTimes" jdbcType="INTEGER" property="bannedtimes" />
+    <result column="lastLogin" jdbcType="INTEGER" property="lastlogin" />
+    <result column="lastLogout" jdbcType="INTEGER" property="lastlogout" />
+    <result column="online_update" jdbcType="INTEGER" property="onlineUpdate" />
+    <result column="totalRecharge" jdbcType="INTEGER" property="totalrecharge" />
+    <result column="vipExp" jdbcType="INTEGER" property="vipexp" />
+    <result column="vipLevel" jdbcType="INTEGER" property="viplevel" />
+    <result column="lv" jdbcType="INTEGER" property="lv" />
+    <result column="exp" jdbcType="INTEGER" property="exp" />
+    <result column="crystal" jdbcType="INTEGER" property="crystal" />
+    <result column="gold" jdbcType="INTEGER" property="gold" />
+    <result column="dungeon_lv" jdbcType="INTEGER" property="dungeonLv" />
+    <result column="dungeon_time" jdbcType="INTEGER" property="dungeonTime" />
+    <result column="ext_package" jdbcType="INTEGER" property="extPackage" />
+    <result column="createTime" jdbcType="INTEGER" property="createtime" />
+    <result column="GmMailCheckId" jdbcType="BIGINT" property="gmmailcheckid" />
+    <result column="strengthen_material" jdbcType="INTEGER" property="strengthenMaterial" />
+    <result column="gem_material" jdbcType="INTEGER" property="gemMaterial" />
+    <result column="star_material" jdbcType="INTEGER" property="starMaterial" />
+    <result column="mer_material" jdbcType="INTEGER" property="merMaterial" />
+    <result column="wing_material" jdbcType="INTEGER" property="wingMaterial" />
+    <result column="arena_token" jdbcType="INTEGER" property="arenaToken" />
+    <result column="equip_instance_material" jdbcType="INTEGER" property="equipInstanceMaterial" />
+    <result column="gem_instance_material" jdbcType="INTEGER" property="gemInstanceMaterial" />
+    <result column="meridian_instance_material" jdbcType="INTEGER" property="meridianInstanceMaterial" />
+    <result column="lingbao_instance_material" jdbcType="INTEGER" property="lingbaoInstanceMaterial" />
+    <result column="wing_instance_material" jdbcType="INTEGER" property="wingInstanceMaterial" />
+    <result column="starinfo_instance_material" jdbcType="INTEGER" property="starinfoInstanceMaterial" />
+    <result column="red_piece" jdbcType="INTEGER" property="redPiece" />
+    <result column="artifice_material" jdbcType="INTEGER" property="artificeMaterial" />
+    <result column="lottery" jdbcType="INTEGER" property="lottery" />
+    <result column="warspirit_talent_material" jdbcType="INTEGER" property="warspiritTalentMaterial" />
+    <result column="warspirit_lv_material" jdbcType="INTEGER" property="warspiritLvMaterial" />
+    <result column="warspirit_lv" jdbcType="INTEGER" property="warspiritLv" />
+    <result column="warspirit_exp" jdbcType="INTEGER" property="warspiritExp" />
+    <result column="warspirit_talent" jdbcType="INTEGER" property="warspiritTalent" />
+    <result column="vicegeneral_decomposition" jdbcType="INTEGER" property="vicegeneralDecomposition" />
+    <result column="vicegeneral_drawCard" jdbcType="INTEGER" property="vicegeneralDrawcard" />
+    <result column="copyCent" jdbcType="INTEGER" property="copycent" />
+    <result column="civilWarCent" jdbcType="INTEGER" property="civilwarcent" />
+    <result column="GuildForage" jdbcType="INTEGER" property="guildforage" />
+    <result column="dress_material" jdbcType="INTEGER" property="dressMaterial" />
+    <result column="exp_material" jdbcType="INTEGER" property="expMaterial" />
+    <result column="rebirth" jdbcType="INTEGER" property="rebirth" />
+    <result column="rebirthExp" jdbcType="INTEGER" property="rebirthexp" />
+    <result column="preMainTaskId" jdbcType="INTEGER" property="premaintaskid" />
+    <result column="curMainTaskCompleteCount" jdbcType="INTEGER" property="curmaintaskcompletecount" />
+    <result column="microRewardState" jdbcType="INTEGER" property="microrewardstate" />
+    <result column="viceGeneratanceMaterial" jdbcType="INTEGER" property="vicegeneratancematerial" />
+    <result column="viceGeneratanceInstanceTime" jdbcType="INTEGER" property="vicegeneratanceinstancetime" />
+    <result column="title_0" jdbcType="INTEGER" property="title0" />
+    <result column="title_1" jdbcType="INTEGER" property="title1" />
+    <result column="title_2" jdbcType="INTEGER" property="title2" />
+    <result column="clientData_0" jdbcType="INTEGER" property="clientdata0" />
+    <result column="clientData_1" jdbcType="INTEGER" property="clientdata1" />
+    <result column="clientData_2" jdbcType="INTEGER" property="clientdata2" />
+    <result column="clientData_3" jdbcType="INTEGER" property="clientdata3" />
+    <result column="clientData_4" jdbcType="INTEGER" property="clientdata4" />
+    <result column="clientData_5" jdbcType="INTEGER" property="clientdata5" />
+    <result column="clientData_6" jdbcType="INTEGER" property="clientdata6" />
+    <result column="clientData_7" jdbcType="INTEGER" property="clientdata7" />
+    <result column="clientData_8" jdbcType="INTEGER" property="clientdata8" />
+    <result column="clientData_9" jdbcType="INTEGER" property="clientdata9" />
+    <result column="guessgold" jdbcType="INTEGER" property="guessgold" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, open_id, sid, name, icon, maxFightPower, gmLevel, cheatTimes, banned_ChatExpiredTime, 
+    banned_LoginExpiredTime, bannedTimes, lastLogin, lastLogout, online_update, totalRecharge, 
+    vipExp, vipLevel, lv, exp, crystal, gold, dungeon_lv, dungeon_time, ext_package, 
+    createTime, GmMailCheckId, strengthen_material, gem_material, star_material, mer_material, 
+    wing_material, arena_token, equip_instance_material, gem_instance_material, meridian_instance_material, 
+    lingbao_instance_material, wing_instance_material, starinfo_instance_material, red_piece, 
+    artifice_material, lottery, warspirit_talent_material, warspirit_lv_material, warspirit_lv, 
+    warspirit_exp, warspirit_talent, vicegeneral_decomposition, vicegeneral_drawCard, 
+    copyCent, civilWarCent, GuildForage, dress_material, exp_material, rebirth, rebirthExp, 
+    preMainTaskId, curMainTaskCompleteCount, microRewardState, viceGeneratanceMaterial, 
+    viceGeneratanceInstanceTime, title_0, title_1, title_2, clientData_0, clientData_1, 
+    clientData_2, clientData_3, clientData_4, clientData_5, clientData_6, clientData_7, 
+    clientData_8, clientData_9, guessgold
+  </sql>
+  <select id="selectByExample" parameterType="com.example.bean.PlayerExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from player
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from player
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from player
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.example.bean.PlayerExample">
+    delete from player
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.example.bean.Player">
+    insert into player (id, open_id, sid, 
+      name, icon, maxFightPower, 
+      gmLevel, cheatTimes, banned_ChatExpiredTime, 
+      banned_LoginExpiredTime, bannedTimes, lastLogin, 
+      lastLogout, online_update, totalRecharge, 
+      vipExp, vipLevel, lv, 
+      exp, crystal, gold, 
+      dungeon_lv, dungeon_time, ext_package, 
+      createTime, GmMailCheckId, strengthen_material, 
+      gem_material, star_material, mer_material, 
+      wing_material, arena_token, equip_instance_material, 
+      gem_instance_material, meridian_instance_material, 
+      lingbao_instance_material, wing_instance_material, 
+      starinfo_instance_material, red_piece, artifice_material, 
+      lottery, warspirit_talent_material, warspirit_lv_material, 
+      warspirit_lv, warspirit_exp, warspirit_talent, 
+      vicegeneral_decomposition, vicegeneral_drawCard, 
+      copyCent, civilWarCent, GuildForage, 
+      dress_material, exp_material, rebirth, 
+      rebirthExp, preMainTaskId, curMainTaskCompleteCount, 
+      microRewardState, viceGeneratanceMaterial, 
+      viceGeneratanceInstanceTime, title_0, title_1, 
+      title_2, clientData_0, clientData_1, 
+      clientData_2, clientData_3, clientData_4, 
+      clientData_5, clientData_6, clientData_7, 
+      clientData_8, clientData_9, guessgold
+      )
+    values (#{id,jdbcType=BIGINT}, #{openId,jdbcType=VARCHAR}, #{sid,jdbcType=INTEGER}, 
+      #{name,jdbcType=VARCHAR}, #{icon,jdbcType=INTEGER}, #{maxfightpower,jdbcType=INTEGER}, 
+      #{gmlevel,jdbcType=INTEGER}, #{cheattimes,jdbcType=INTEGER}, #{bannedChatexpiredtime,jdbcType=INTEGER}, 
+      #{bannedLoginexpiredtime,jdbcType=INTEGER}, #{bannedtimes,jdbcType=INTEGER}, #{lastlogin,jdbcType=INTEGER}, 
+      #{lastlogout,jdbcType=INTEGER}, #{onlineUpdate,jdbcType=INTEGER}, #{totalrecharge,jdbcType=INTEGER}, 
+      #{vipexp,jdbcType=INTEGER}, #{viplevel,jdbcType=INTEGER}, #{lv,jdbcType=INTEGER}, 
+      #{exp,jdbcType=INTEGER}, #{crystal,jdbcType=INTEGER}, #{gold,jdbcType=INTEGER}, 
+      #{dungeonLv,jdbcType=INTEGER}, #{dungeonTime,jdbcType=INTEGER}, #{extPackage,jdbcType=INTEGER}, 
+      #{createtime,jdbcType=INTEGER}, #{gmmailcheckid,jdbcType=BIGINT}, #{strengthenMaterial,jdbcType=INTEGER}, 
+      #{gemMaterial,jdbcType=INTEGER}, #{starMaterial,jdbcType=INTEGER}, #{merMaterial,jdbcType=INTEGER}, 
+      #{wingMaterial,jdbcType=INTEGER}, #{arenaToken,jdbcType=INTEGER}, #{equipInstanceMaterial,jdbcType=INTEGER}, 
+      #{gemInstanceMaterial,jdbcType=INTEGER}, #{meridianInstanceMaterial,jdbcType=INTEGER}, 
+      #{lingbaoInstanceMaterial,jdbcType=INTEGER}, #{wingInstanceMaterial,jdbcType=INTEGER}, 
+      #{starinfoInstanceMaterial,jdbcType=INTEGER}, #{redPiece,jdbcType=INTEGER}, #{artificeMaterial,jdbcType=INTEGER}, 
+      #{lottery,jdbcType=INTEGER}, #{warspiritTalentMaterial,jdbcType=INTEGER}, #{warspiritLvMaterial,jdbcType=INTEGER}, 
+      #{warspiritLv,jdbcType=INTEGER}, #{warspiritExp,jdbcType=INTEGER}, #{warspiritTalent,jdbcType=INTEGER}, 
+      #{vicegeneralDecomposition,jdbcType=INTEGER}, #{vicegeneralDrawcard,jdbcType=INTEGER}, 
+      #{copycent,jdbcType=INTEGER}, #{civilwarcent,jdbcType=INTEGER}, #{guildforage,jdbcType=INTEGER}, 
+      #{dressMaterial,jdbcType=INTEGER}, #{expMaterial,jdbcType=INTEGER}, #{rebirth,jdbcType=INTEGER}, 
+      #{rebirthexp,jdbcType=INTEGER}, #{premaintaskid,jdbcType=INTEGER}, #{curmaintaskcompletecount,jdbcType=INTEGER}, 
+      #{microrewardstate,jdbcType=INTEGER}, #{vicegeneratancematerial,jdbcType=INTEGER}, 
+      #{vicegeneratanceinstancetime,jdbcType=INTEGER}, #{title0,jdbcType=INTEGER}, #{title1,jdbcType=INTEGER}, 
+      #{title2,jdbcType=INTEGER}, #{clientdata0,jdbcType=INTEGER}, #{clientdata1,jdbcType=INTEGER}, 
+      #{clientdata2,jdbcType=INTEGER}, #{clientdata3,jdbcType=INTEGER}, #{clientdata4,jdbcType=INTEGER}, 
+      #{clientdata5,jdbcType=INTEGER}, #{clientdata6,jdbcType=INTEGER}, #{clientdata7,jdbcType=INTEGER}, 
+      #{clientdata8,jdbcType=INTEGER}, #{clientdata9,jdbcType=INTEGER}, #{guessgold,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.bean.Player">
+    insert into player
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="openId != null">
+        open_id,
+      </if>
+      <if test="sid != null">
+        sid,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="icon != null">
+        icon,
+      </if>
+      <if test="maxfightpower != null">
+        maxFightPower,
+      </if>
+      <if test="gmlevel != null">
+        gmLevel,
+      </if>
+      <if test="cheattimes != null">
+        cheatTimes,
+      </if>
+      <if test="bannedChatexpiredtime != null">
+        banned_ChatExpiredTime,
+      </if>
+      <if test="bannedLoginexpiredtime != null">
+        banned_LoginExpiredTime,
+      </if>
+      <if test="bannedtimes != null">
+        bannedTimes,
+      </if>
+      <if test="lastlogin != null">
+        lastLogin,
+      </if>
+      <if test="lastlogout != null">
+        lastLogout,
+      </if>
+      <if test="onlineUpdate != null">
+        online_update,
+      </if>
+      <if test="totalrecharge != null">
+        totalRecharge,
+      </if>
+      <if test="vipexp != null">
+        vipExp,
+      </if>
+      <if test="viplevel != null">
+        vipLevel,
+      </if>
+      <if test="lv != null">
+        lv,
+      </if>
+      <if test="exp != null">
+        exp,
+      </if>
+      <if test="crystal != null">
+        crystal,
+      </if>
+      <if test="gold != null">
+        gold,
+      </if>
+      <if test="dungeonLv != null">
+        dungeon_lv,
+      </if>
+      <if test="dungeonTime != null">
+        dungeon_time,
+      </if>
+      <if test="extPackage != null">
+        ext_package,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="gmmailcheckid != null">
+        GmMailCheckId,
+      </if>
+      <if test="strengthenMaterial != null">
+        strengthen_material,
+      </if>
+      <if test="gemMaterial != null">
+        gem_material,
+      </if>
+      <if test="starMaterial != null">
+        star_material,
+      </if>
+      <if test="merMaterial != null">
+        mer_material,
+      </if>
+      <if test="wingMaterial != null">
+        wing_material,
+      </if>
+      <if test="arenaToken != null">
+        arena_token,
+      </if>
+      <if test="equipInstanceMaterial != null">
+        equip_instance_material,
+      </if>
+      <if test="gemInstanceMaterial != null">
+        gem_instance_material,
+      </if>
+      <if test="meridianInstanceMaterial != null">
+        meridian_instance_material,
+      </if>
+      <if test="lingbaoInstanceMaterial != null">
+        lingbao_instance_material,
+      </if>
+      <if test="wingInstanceMaterial != null">
+        wing_instance_material,
+      </if>
+      <if test="starinfoInstanceMaterial != null">
+        starinfo_instance_material,
+      </if>
+      <if test="redPiece != null">
+        red_piece,
+      </if>
+      <if test="artificeMaterial != null">
+        artifice_material,
+      </if>
+      <if test="lottery != null">
+        lottery,
+      </if>
+      <if test="warspiritTalentMaterial != null">
+        warspirit_talent_material,
+      </if>
+      <if test="warspiritLvMaterial != null">
+        warspirit_lv_material,
+      </if>
+      <if test="warspiritLv != null">
+        warspirit_lv,
+      </if>
+      <if test="warspiritExp != null">
+        warspirit_exp,
+      </if>
+      <if test="warspiritTalent != null">
+        warspirit_talent,
+      </if>
+      <if test="vicegeneralDecomposition != null">
+        vicegeneral_decomposition,
+      </if>
+      <if test="vicegeneralDrawcard != null">
+        vicegeneral_drawCard,
+      </if>
+      <if test="copycent != null">
+        copyCent,
+      </if>
+      <if test="civilwarcent != null">
+        civilWarCent,
+      </if>
+      <if test="guildforage != null">
+        GuildForage,
+      </if>
+      <if test="dressMaterial != null">
+        dress_material,
+      </if>
+      <if test="expMaterial != null">
+        exp_material,
+      </if>
+      <if test="rebirth != null">
+        rebirth,
+      </if>
+      <if test="rebirthexp != null">
+        rebirthExp,
+      </if>
+      <if test="premaintaskid != null">
+        preMainTaskId,
+      </if>
+      <if test="curmaintaskcompletecount != null">
+        curMainTaskCompleteCount,
+      </if>
+      <if test="microrewardstate != null">
+        microRewardState,
+      </if>
+      <if test="vicegeneratancematerial != null">
+        viceGeneratanceMaterial,
+      </if>
+      <if test="vicegeneratanceinstancetime != null">
+        viceGeneratanceInstanceTime,
+      </if>
+      <if test="title0 != null">
+        title_0,
+      </if>
+      <if test="title1 != null">
+        title_1,
+      </if>
+      <if test="title2 != null">
+        title_2,
+      </if>
+      <if test="clientdata0 != null">
+        clientData_0,
+      </if>
+      <if test="clientdata1 != null">
+        clientData_1,
+      </if>
+      <if test="clientdata2 != null">
+        clientData_2,
+      </if>
+      <if test="clientdata3 != null">
+        clientData_3,
+      </if>
+      <if test="clientdata4 != null">
+        clientData_4,
+      </if>
+      <if test="clientdata5 != null">
+        clientData_5,
+      </if>
+      <if test="clientdata6 != null">
+        clientData_6,
+      </if>
+      <if test="clientdata7 != null">
+        clientData_7,
+      </if>
+      <if test="clientdata8 != null">
+        clientData_8,
+      </if>
+      <if test="clientdata9 != null">
+        clientData_9,
+      </if>
+      <if test="guessgold != null">
+        guessgold,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="openId != null">
+        #{openId,jdbcType=VARCHAR},
+      </if>
+      <if test="sid != null">
+        #{sid,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null">
+        #{icon,jdbcType=INTEGER},
+      </if>
+      <if test="maxfightpower != null">
+        #{maxfightpower,jdbcType=INTEGER},
+      </if>
+      <if test="gmlevel != null">
+        #{gmlevel,jdbcType=INTEGER},
+      </if>
+      <if test="cheattimes != null">
+        #{cheattimes,jdbcType=INTEGER},
+      </if>
+      <if test="bannedChatexpiredtime != null">
+        #{bannedChatexpiredtime,jdbcType=INTEGER},
+      </if>
+      <if test="bannedLoginexpiredtime != null">
+        #{bannedLoginexpiredtime,jdbcType=INTEGER},
+      </if>
+      <if test="bannedtimes != null">
+        #{bannedtimes,jdbcType=INTEGER},
+      </if>
+      <if test="lastlogin != null">
+        #{lastlogin,jdbcType=INTEGER},
+      </if>
+      <if test="lastlogout != null">
+        #{lastlogout,jdbcType=INTEGER},
+      </if>
+      <if test="onlineUpdate != null">
+        #{onlineUpdate,jdbcType=INTEGER},
+      </if>
+      <if test="totalrecharge != null">
+        #{totalrecharge,jdbcType=INTEGER},
+      </if>
+      <if test="vipexp != null">
+        #{vipexp,jdbcType=INTEGER},
+      </if>
+      <if test="viplevel != null">
+        #{viplevel,jdbcType=INTEGER},
+      </if>
+      <if test="lv != null">
+        #{lv,jdbcType=INTEGER},
+      </if>
+      <if test="exp != null">
+        #{exp,jdbcType=INTEGER},
+      </if>
+      <if test="crystal != null">
+        #{crystal,jdbcType=INTEGER},
+      </if>
+      <if test="gold != null">
+        #{gold,jdbcType=INTEGER},
+      </if>
+      <if test="dungeonLv != null">
+        #{dungeonLv,jdbcType=INTEGER},
+      </if>
+      <if test="dungeonTime != null">
+        #{dungeonTime,jdbcType=INTEGER},
+      </if>
+      <if test="extPackage != null">
+        #{extPackage,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=INTEGER},
+      </if>
+      <if test="gmmailcheckid != null">
+        #{gmmailcheckid,jdbcType=BIGINT},
+      </if>
+      <if test="strengthenMaterial != null">
+        #{strengthenMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="gemMaterial != null">
+        #{gemMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="starMaterial != null">
+        #{starMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="merMaterial != null">
+        #{merMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="wingMaterial != null">
+        #{wingMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="arenaToken != null">
+        #{arenaToken,jdbcType=INTEGER},
+      </if>
+      <if test="equipInstanceMaterial != null">
+        #{equipInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="gemInstanceMaterial != null">
+        #{gemInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="meridianInstanceMaterial != null">
+        #{meridianInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="lingbaoInstanceMaterial != null">
+        #{lingbaoInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="wingInstanceMaterial != null">
+        #{wingInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="starinfoInstanceMaterial != null">
+        #{starinfoInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="redPiece != null">
+        #{redPiece,jdbcType=INTEGER},
+      </if>
+      <if test="artificeMaterial != null">
+        #{artificeMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="lottery != null">
+        #{lottery,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritTalentMaterial != null">
+        #{warspiritTalentMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritLvMaterial != null">
+        #{warspiritLvMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritLv != null">
+        #{warspiritLv,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritExp != null">
+        #{warspiritExp,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritTalent != null">
+        #{warspiritTalent,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneralDecomposition != null">
+        #{vicegeneralDecomposition,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneralDrawcard != null">
+        #{vicegeneralDrawcard,jdbcType=INTEGER},
+      </if>
+      <if test="copycent != null">
+        #{copycent,jdbcType=INTEGER},
+      </if>
+      <if test="civilwarcent != null">
+        #{civilwarcent,jdbcType=INTEGER},
+      </if>
+      <if test="guildforage != null">
+        #{guildforage,jdbcType=INTEGER},
+      </if>
+      <if test="dressMaterial != null">
+        #{dressMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="expMaterial != null">
+        #{expMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="rebirth != null">
+        #{rebirth,jdbcType=INTEGER},
+      </if>
+      <if test="rebirthexp != null">
+        #{rebirthexp,jdbcType=INTEGER},
+      </if>
+      <if test="premaintaskid != null">
+        #{premaintaskid,jdbcType=INTEGER},
+      </if>
+      <if test="curmaintaskcompletecount != null">
+        #{curmaintaskcompletecount,jdbcType=INTEGER},
+      </if>
+      <if test="microrewardstate != null">
+        #{microrewardstate,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneratancematerial != null">
+        #{vicegeneratancematerial,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneratanceinstancetime != null">
+        #{vicegeneratanceinstancetime,jdbcType=INTEGER},
+      </if>
+      <if test="title0 != null">
+        #{title0,jdbcType=INTEGER},
+      </if>
+      <if test="title1 != null">
+        #{title1,jdbcType=INTEGER},
+      </if>
+      <if test="title2 != null">
+        #{title2,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata0 != null">
+        #{clientdata0,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata1 != null">
+        #{clientdata1,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata2 != null">
+        #{clientdata2,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata3 != null">
+        #{clientdata3,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata4 != null">
+        #{clientdata4,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata5 != null">
+        #{clientdata5,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata6 != null">
+        #{clientdata6,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata7 != null">
+        #{clientdata7,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata8 != null">
+        #{clientdata8,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata9 != null">
+        #{clientdata9,jdbcType=INTEGER},
+      </if>
+      <if test="guessgold != null">
+        #{guessgold,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.example.bean.PlayerExample" resultType="java.lang.Long">
+    select count(*) from player
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update player
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.openId != null">
+        open_id = #{record.openId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sid != null">
+        sid = #{record.sid,jdbcType=INTEGER},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.icon != null">
+        icon = #{record.icon,jdbcType=INTEGER},
+      </if>
+      <if test="record.maxfightpower != null">
+        maxFightPower = #{record.maxfightpower,jdbcType=INTEGER},
+      </if>
+      <if test="record.gmlevel != null">
+        gmLevel = #{record.gmlevel,jdbcType=INTEGER},
+      </if>
+      <if test="record.cheattimes != null">
+        cheatTimes = #{record.cheattimes,jdbcType=INTEGER},
+      </if>
+      <if test="record.bannedChatexpiredtime != null">
+        banned_ChatExpiredTime = #{record.bannedChatexpiredtime,jdbcType=INTEGER},
+      </if>
+      <if test="record.bannedLoginexpiredtime != null">
+        banned_LoginExpiredTime = #{record.bannedLoginexpiredtime,jdbcType=INTEGER},
+      </if>
+      <if test="record.bannedtimes != null">
+        bannedTimes = #{record.bannedtimes,jdbcType=INTEGER},
+      </if>
+      <if test="record.lastlogin != null">
+        lastLogin = #{record.lastlogin,jdbcType=INTEGER},
+      </if>
+      <if test="record.lastlogout != null">
+        lastLogout = #{record.lastlogout,jdbcType=INTEGER},
+      </if>
+      <if test="record.onlineUpdate != null">
+        online_update = #{record.onlineUpdate,jdbcType=INTEGER},
+      </if>
+      <if test="record.totalrecharge != null">
+        totalRecharge = #{record.totalrecharge,jdbcType=INTEGER},
+      </if>
+      <if test="record.vipexp != null">
+        vipExp = #{record.vipexp,jdbcType=INTEGER},
+      </if>
+      <if test="record.viplevel != null">
+        vipLevel = #{record.viplevel,jdbcType=INTEGER},
+      </if>
+      <if test="record.lv != null">
+        lv = #{record.lv,jdbcType=INTEGER},
+      </if>
+      <if test="record.exp != null">
+        exp = #{record.exp,jdbcType=INTEGER},
+      </if>
+      <if test="record.crystal != null">
+        crystal = #{record.crystal,jdbcType=INTEGER},
+      </if>
+      <if test="record.gold != null">
+        gold = #{record.gold,jdbcType=INTEGER},
+      </if>
+      <if test="record.dungeonLv != null">
+        dungeon_lv = #{record.dungeonLv,jdbcType=INTEGER},
+      </if>
+      <if test="record.dungeonTime != null">
+        dungeon_time = #{record.dungeonTime,jdbcType=INTEGER},
+      </if>
+      <if test="record.extPackage != null">
+        ext_package = #{record.extPackage,jdbcType=INTEGER},
+      </if>
+      <if test="record.createtime != null">
+        createTime = #{record.createtime,jdbcType=INTEGER},
+      </if>
+      <if test="record.gmmailcheckid != null">
+        GmMailCheckId = #{record.gmmailcheckid,jdbcType=BIGINT},
+      </if>
+      <if test="record.strengthenMaterial != null">
+        strengthen_material = #{record.strengthenMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.gemMaterial != null">
+        gem_material = #{record.gemMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.starMaterial != null">
+        star_material = #{record.starMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.merMaterial != null">
+        mer_material = #{record.merMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.wingMaterial != null">
+        wing_material = #{record.wingMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.arenaToken != null">
+        arena_token = #{record.arenaToken,jdbcType=INTEGER},
+      </if>
+      <if test="record.equipInstanceMaterial != null">
+        equip_instance_material = #{record.equipInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.gemInstanceMaterial != null">
+        gem_instance_material = #{record.gemInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.meridianInstanceMaterial != null">
+        meridian_instance_material = #{record.meridianInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.lingbaoInstanceMaterial != null">
+        lingbao_instance_material = #{record.lingbaoInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.wingInstanceMaterial != null">
+        wing_instance_material = #{record.wingInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.starinfoInstanceMaterial != null">
+        starinfo_instance_material = #{record.starinfoInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.redPiece != null">
+        red_piece = #{record.redPiece,jdbcType=INTEGER},
+      </if>
+      <if test="record.artificeMaterial != null">
+        artifice_material = #{record.artificeMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.lottery != null">
+        lottery = #{record.lottery,jdbcType=INTEGER},
+      </if>
+      <if test="record.warspiritTalentMaterial != null">
+        warspirit_talent_material = #{record.warspiritTalentMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.warspiritLvMaterial != null">
+        warspirit_lv_material = #{record.warspiritLvMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.warspiritLv != null">
+        warspirit_lv = #{record.warspiritLv,jdbcType=INTEGER},
+      </if>
+      <if test="record.warspiritExp != null">
+        warspirit_exp = #{record.warspiritExp,jdbcType=INTEGER},
+      </if>
+      <if test="record.warspiritTalent != null">
+        warspirit_talent = #{record.warspiritTalent,jdbcType=INTEGER},
+      </if>
+      <if test="record.vicegeneralDecomposition != null">
+        vicegeneral_decomposition = #{record.vicegeneralDecomposition,jdbcType=INTEGER},
+      </if>
+      <if test="record.vicegeneralDrawcard != null">
+        vicegeneral_drawCard = #{record.vicegeneralDrawcard,jdbcType=INTEGER},
+      </if>
+      <if test="record.copycent != null">
+        copyCent = #{record.copycent,jdbcType=INTEGER},
+      </if>
+      <if test="record.civilwarcent != null">
+        civilWarCent = #{record.civilwarcent,jdbcType=INTEGER},
+      </if>
+      <if test="record.guildforage != null">
+        GuildForage = #{record.guildforage,jdbcType=INTEGER},
+      </if>
+      <if test="record.dressMaterial != null">
+        dress_material = #{record.dressMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.expMaterial != null">
+        exp_material = #{record.expMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="record.rebirth != null">
+        rebirth = #{record.rebirth,jdbcType=INTEGER},
+      </if>
+      <if test="record.rebirthexp != null">
+        rebirthExp = #{record.rebirthexp,jdbcType=INTEGER},
+      </if>
+      <if test="record.premaintaskid != null">
+        preMainTaskId = #{record.premaintaskid,jdbcType=INTEGER},
+      </if>
+      <if test="record.curmaintaskcompletecount != null">
+        curMainTaskCompleteCount = #{record.curmaintaskcompletecount,jdbcType=INTEGER},
+      </if>
+      <if test="record.microrewardstate != null">
+        microRewardState = #{record.microrewardstate,jdbcType=INTEGER},
+      </if>
+      <if test="record.vicegeneratancematerial != null">
+        viceGeneratanceMaterial = #{record.vicegeneratancematerial,jdbcType=INTEGER},
+      </if>
+      <if test="record.vicegeneratanceinstancetime != null">
+        viceGeneratanceInstanceTime = #{record.vicegeneratanceinstancetime,jdbcType=INTEGER},
+      </if>
+      <if test="record.title0 != null">
+        title_0 = #{record.title0,jdbcType=INTEGER},
+      </if>
+      <if test="record.title1 != null">
+        title_1 = #{record.title1,jdbcType=INTEGER},
+      </if>
+      <if test="record.title2 != null">
+        title_2 = #{record.title2,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata0 != null">
+        clientData_0 = #{record.clientdata0,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata1 != null">
+        clientData_1 = #{record.clientdata1,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata2 != null">
+        clientData_2 = #{record.clientdata2,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata3 != null">
+        clientData_3 = #{record.clientdata3,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata4 != null">
+        clientData_4 = #{record.clientdata4,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata5 != null">
+        clientData_5 = #{record.clientdata5,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata6 != null">
+        clientData_6 = #{record.clientdata6,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata7 != null">
+        clientData_7 = #{record.clientdata7,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata8 != null">
+        clientData_8 = #{record.clientdata8,jdbcType=INTEGER},
+      </if>
+      <if test="record.clientdata9 != null">
+        clientData_9 = #{record.clientdata9,jdbcType=INTEGER},
+      </if>
+      <if test="record.guessgold != null">
+        guessgold = #{record.guessgold,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update player
+    set id = #{record.id,jdbcType=BIGINT},
+      open_id = #{record.openId,jdbcType=VARCHAR},
+      sid = #{record.sid,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
+      icon = #{record.icon,jdbcType=INTEGER},
+      maxFightPower = #{record.maxfightpower,jdbcType=INTEGER},
+      gmLevel = #{record.gmlevel,jdbcType=INTEGER},
+      cheatTimes = #{record.cheattimes,jdbcType=INTEGER},
+      banned_ChatExpiredTime = #{record.bannedChatexpiredtime,jdbcType=INTEGER},
+      banned_LoginExpiredTime = #{record.bannedLoginexpiredtime,jdbcType=INTEGER},
+      bannedTimes = #{record.bannedtimes,jdbcType=INTEGER},
+      lastLogin = #{record.lastlogin,jdbcType=INTEGER},
+      lastLogout = #{record.lastlogout,jdbcType=INTEGER},
+      online_update = #{record.onlineUpdate,jdbcType=INTEGER},
+      totalRecharge = #{record.totalrecharge,jdbcType=INTEGER},
+      vipExp = #{record.vipexp,jdbcType=INTEGER},
+      vipLevel = #{record.viplevel,jdbcType=INTEGER},
+      lv = #{record.lv,jdbcType=INTEGER},
+      exp = #{record.exp,jdbcType=INTEGER},
+      crystal = #{record.crystal,jdbcType=INTEGER},
+      gold = #{record.gold,jdbcType=INTEGER},
+      dungeon_lv = #{record.dungeonLv,jdbcType=INTEGER},
+      dungeon_time = #{record.dungeonTime,jdbcType=INTEGER},
+      ext_package = #{record.extPackage,jdbcType=INTEGER},
+      createTime = #{record.createtime,jdbcType=INTEGER},
+      GmMailCheckId = #{record.gmmailcheckid,jdbcType=BIGINT},
+      strengthen_material = #{record.strengthenMaterial,jdbcType=INTEGER},
+      gem_material = #{record.gemMaterial,jdbcType=INTEGER},
+      star_material = #{record.starMaterial,jdbcType=INTEGER},
+      mer_material = #{record.merMaterial,jdbcType=INTEGER},
+      wing_material = #{record.wingMaterial,jdbcType=INTEGER},
+      arena_token = #{record.arenaToken,jdbcType=INTEGER},
+      equip_instance_material = #{record.equipInstanceMaterial,jdbcType=INTEGER},
+      gem_instance_material = #{record.gemInstanceMaterial,jdbcType=INTEGER},
+      meridian_instance_material = #{record.meridianInstanceMaterial,jdbcType=INTEGER},
+      lingbao_instance_material = #{record.lingbaoInstanceMaterial,jdbcType=INTEGER},
+      wing_instance_material = #{record.wingInstanceMaterial,jdbcType=INTEGER},
+      starinfo_instance_material = #{record.starinfoInstanceMaterial,jdbcType=INTEGER},
+      red_piece = #{record.redPiece,jdbcType=INTEGER},
+      artifice_material = #{record.artificeMaterial,jdbcType=INTEGER},
+      lottery = #{record.lottery,jdbcType=INTEGER},
+      warspirit_talent_material = #{record.warspiritTalentMaterial,jdbcType=INTEGER},
+      warspirit_lv_material = #{record.warspiritLvMaterial,jdbcType=INTEGER},
+      warspirit_lv = #{record.warspiritLv,jdbcType=INTEGER},
+      warspirit_exp = #{record.warspiritExp,jdbcType=INTEGER},
+      warspirit_talent = #{record.warspiritTalent,jdbcType=INTEGER},
+      vicegeneral_decomposition = #{record.vicegeneralDecomposition,jdbcType=INTEGER},
+      vicegeneral_drawCard = #{record.vicegeneralDrawcard,jdbcType=INTEGER},
+      copyCent = #{record.copycent,jdbcType=INTEGER},
+      civilWarCent = #{record.civilwarcent,jdbcType=INTEGER},
+      GuildForage = #{record.guildforage,jdbcType=INTEGER},
+      dress_material = #{record.dressMaterial,jdbcType=INTEGER},
+      exp_material = #{record.expMaterial,jdbcType=INTEGER},
+      rebirth = #{record.rebirth,jdbcType=INTEGER},
+      rebirthExp = #{record.rebirthexp,jdbcType=INTEGER},
+      preMainTaskId = #{record.premaintaskid,jdbcType=INTEGER},
+      curMainTaskCompleteCount = #{record.curmaintaskcompletecount,jdbcType=INTEGER},
+      microRewardState = #{record.microrewardstate,jdbcType=INTEGER},
+      viceGeneratanceMaterial = #{record.vicegeneratancematerial,jdbcType=INTEGER},
+      viceGeneratanceInstanceTime = #{record.vicegeneratanceinstancetime,jdbcType=INTEGER},
+      title_0 = #{record.title0,jdbcType=INTEGER},
+      title_1 = #{record.title1,jdbcType=INTEGER},
+      title_2 = #{record.title2,jdbcType=INTEGER},
+      clientData_0 = #{record.clientdata0,jdbcType=INTEGER},
+      clientData_1 = #{record.clientdata1,jdbcType=INTEGER},
+      clientData_2 = #{record.clientdata2,jdbcType=INTEGER},
+      clientData_3 = #{record.clientdata3,jdbcType=INTEGER},
+      clientData_4 = #{record.clientdata4,jdbcType=INTEGER},
+      clientData_5 = #{record.clientdata5,jdbcType=INTEGER},
+      clientData_6 = #{record.clientdata6,jdbcType=INTEGER},
+      clientData_7 = #{record.clientdata7,jdbcType=INTEGER},
+      clientData_8 = #{record.clientdata8,jdbcType=INTEGER},
+      clientData_9 = #{record.clientdata9,jdbcType=INTEGER},
+      guessgold = #{record.guessgold,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.bean.Player">
+    update player
+    <set>
+      <if test="openId != null">
+        open_id = #{openId,jdbcType=VARCHAR},
+      </if>
+      <if test="sid != null">
+        sid = #{sid,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null">
+        icon = #{icon,jdbcType=INTEGER},
+      </if>
+      <if test="maxfightpower != null">
+        maxFightPower = #{maxfightpower,jdbcType=INTEGER},
+      </if>
+      <if test="gmlevel != null">
+        gmLevel = #{gmlevel,jdbcType=INTEGER},
+      </if>
+      <if test="cheattimes != null">
+        cheatTimes = #{cheattimes,jdbcType=INTEGER},
+      </if>
+      <if test="bannedChatexpiredtime != null">
+        banned_ChatExpiredTime = #{bannedChatexpiredtime,jdbcType=INTEGER},
+      </if>
+      <if test="bannedLoginexpiredtime != null">
+        banned_LoginExpiredTime = #{bannedLoginexpiredtime,jdbcType=INTEGER},
+      </if>
+      <if test="bannedtimes != null">
+        bannedTimes = #{bannedtimes,jdbcType=INTEGER},
+      </if>
+      <if test="lastlogin != null">
+        lastLogin = #{lastlogin,jdbcType=INTEGER},
+      </if>
+      <if test="lastlogout != null">
+        lastLogout = #{lastlogout,jdbcType=INTEGER},
+      </if>
+      <if test="onlineUpdate != null">
+        online_update = #{onlineUpdate,jdbcType=INTEGER},
+      </if>
+      <if test="totalrecharge != null">
+        totalRecharge = #{totalrecharge,jdbcType=INTEGER},
+      </if>
+      <if test="vipexp != null">
+        vipExp = #{vipexp,jdbcType=INTEGER},
+      </if>
+      <if test="viplevel != null">
+        vipLevel = #{viplevel,jdbcType=INTEGER},
+      </if>
+      <if test="lv != null">
+        lv = #{lv,jdbcType=INTEGER},
+      </if>
+      <if test="exp != null">
+        exp = #{exp,jdbcType=INTEGER},
+      </if>
+      <if test="crystal != null">
+        crystal = #{crystal,jdbcType=INTEGER},
+      </if>
+      <if test="gold != null">
+        gold = #{gold,jdbcType=INTEGER},
+      </if>
+      <if test="dungeonLv != null">
+        dungeon_lv = #{dungeonLv,jdbcType=INTEGER},
+      </if>
+      <if test="dungeonTime != null">
+        dungeon_time = #{dungeonTime,jdbcType=INTEGER},
+      </if>
+      <if test="extPackage != null">
+        ext_package = #{extPackage,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=INTEGER},
+      </if>
+      <if test="gmmailcheckid != null">
+        GmMailCheckId = #{gmmailcheckid,jdbcType=BIGINT},
+      </if>
+      <if test="strengthenMaterial != null">
+        strengthen_material = #{strengthenMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="gemMaterial != null">
+        gem_material = #{gemMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="starMaterial != null">
+        star_material = #{starMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="merMaterial != null">
+        mer_material = #{merMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="wingMaterial != null">
+        wing_material = #{wingMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="arenaToken != null">
+        arena_token = #{arenaToken,jdbcType=INTEGER},
+      </if>
+      <if test="equipInstanceMaterial != null">
+        equip_instance_material = #{equipInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="gemInstanceMaterial != null">
+        gem_instance_material = #{gemInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="meridianInstanceMaterial != null">
+        meridian_instance_material = #{meridianInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="lingbaoInstanceMaterial != null">
+        lingbao_instance_material = #{lingbaoInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="wingInstanceMaterial != null">
+        wing_instance_material = #{wingInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="starinfoInstanceMaterial != null">
+        starinfo_instance_material = #{starinfoInstanceMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="redPiece != null">
+        red_piece = #{redPiece,jdbcType=INTEGER},
+      </if>
+      <if test="artificeMaterial != null">
+        artifice_material = #{artificeMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="lottery != null">
+        lottery = #{lottery,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritTalentMaterial != null">
+        warspirit_talent_material = #{warspiritTalentMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritLvMaterial != null">
+        warspirit_lv_material = #{warspiritLvMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritLv != null">
+        warspirit_lv = #{warspiritLv,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritExp != null">
+        warspirit_exp = #{warspiritExp,jdbcType=INTEGER},
+      </if>
+      <if test="warspiritTalent != null">
+        warspirit_talent = #{warspiritTalent,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneralDecomposition != null">
+        vicegeneral_decomposition = #{vicegeneralDecomposition,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneralDrawcard != null">
+        vicegeneral_drawCard = #{vicegeneralDrawcard,jdbcType=INTEGER},
+      </if>
+      <if test="copycent != null">
+        copyCent = #{copycent,jdbcType=INTEGER},
+      </if>
+      <if test="civilwarcent != null">
+        civilWarCent = #{civilwarcent,jdbcType=INTEGER},
+      </if>
+      <if test="guildforage != null">
+        GuildForage = #{guildforage,jdbcType=INTEGER},
+      </if>
+      <if test="dressMaterial != null">
+        dress_material = #{dressMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="expMaterial != null">
+        exp_material = #{expMaterial,jdbcType=INTEGER},
+      </if>
+      <if test="rebirth != null">
+        rebirth = #{rebirth,jdbcType=INTEGER},
+      </if>
+      <if test="rebirthexp != null">
+        rebirthExp = #{rebirthexp,jdbcType=INTEGER},
+      </if>
+      <if test="premaintaskid != null">
+        preMainTaskId = #{premaintaskid,jdbcType=INTEGER},
+      </if>
+      <if test="curmaintaskcompletecount != null">
+        curMainTaskCompleteCount = #{curmaintaskcompletecount,jdbcType=INTEGER},
+      </if>
+      <if test="microrewardstate != null">
+        microRewardState = #{microrewardstate,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneratancematerial != null">
+        viceGeneratanceMaterial = #{vicegeneratancematerial,jdbcType=INTEGER},
+      </if>
+      <if test="vicegeneratanceinstancetime != null">
+        viceGeneratanceInstanceTime = #{vicegeneratanceinstancetime,jdbcType=INTEGER},
+      </if>
+      <if test="title0 != null">
+        title_0 = #{title0,jdbcType=INTEGER},
+      </if>
+      <if test="title1 != null">
+        title_1 = #{title1,jdbcType=INTEGER},
+      </if>
+      <if test="title2 != null">
+        title_2 = #{title2,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata0 != null">
+        clientData_0 = #{clientdata0,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata1 != null">
+        clientData_1 = #{clientdata1,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata2 != null">
+        clientData_2 = #{clientdata2,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata3 != null">
+        clientData_3 = #{clientdata3,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata4 != null">
+        clientData_4 = #{clientdata4,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata5 != null">
+        clientData_5 = #{clientdata5,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata6 != null">
+        clientData_6 = #{clientdata6,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata7 != null">
+        clientData_7 = #{clientdata7,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata8 != null">
+        clientData_8 = #{clientdata8,jdbcType=INTEGER},
+      </if>
+      <if test="clientdata9 != null">
+        clientData_9 = #{clientdata9,jdbcType=INTEGER},
+      </if>
+      <if test="guessgold != null">
+        guessgold = #{guessgold,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.bean.Player">
+    update player
+    set open_id = #{openId,jdbcType=VARCHAR},
+      sid = #{sid,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR},
+      icon = #{icon,jdbcType=INTEGER},
+      maxFightPower = #{maxfightpower,jdbcType=INTEGER},
+      gmLevel = #{gmlevel,jdbcType=INTEGER},
+      cheatTimes = #{cheattimes,jdbcType=INTEGER},
+      banned_ChatExpiredTime = #{bannedChatexpiredtime,jdbcType=INTEGER},
+      banned_LoginExpiredTime = #{bannedLoginexpiredtime,jdbcType=INTEGER},
+      bannedTimes = #{bannedtimes,jdbcType=INTEGER},
+      lastLogin = #{lastlogin,jdbcType=INTEGER},
+      lastLogout = #{lastlogout,jdbcType=INTEGER},
+      online_update = #{onlineUpdate,jdbcType=INTEGER},
+      totalRecharge = #{totalrecharge,jdbcType=INTEGER},
+      vipExp = #{vipexp,jdbcType=INTEGER},
+      vipLevel = #{viplevel,jdbcType=INTEGER},
+      lv = #{lv,jdbcType=INTEGER},
+      exp = #{exp,jdbcType=INTEGER},
+      crystal = #{crystal,jdbcType=INTEGER},
+      gold = #{gold,jdbcType=INTEGER},
+      dungeon_lv = #{dungeonLv,jdbcType=INTEGER},
+      dungeon_time = #{dungeonTime,jdbcType=INTEGER},
+      ext_package = #{extPackage,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=INTEGER},
+      GmMailCheckId = #{gmmailcheckid,jdbcType=BIGINT},
+      strengthen_material = #{strengthenMaterial,jdbcType=INTEGER},
+      gem_material = #{gemMaterial,jdbcType=INTEGER},
+      star_material = #{starMaterial,jdbcType=INTEGER},
+      mer_material = #{merMaterial,jdbcType=INTEGER},
+      wing_material = #{wingMaterial,jdbcType=INTEGER},
+      arena_token = #{arenaToken,jdbcType=INTEGER},
+      equip_instance_material = #{equipInstanceMaterial,jdbcType=INTEGER},
+      gem_instance_material = #{gemInstanceMaterial,jdbcType=INTEGER},
+      meridian_instance_material = #{meridianInstanceMaterial,jdbcType=INTEGER},
+      lingbao_instance_material = #{lingbaoInstanceMaterial,jdbcType=INTEGER},
+      wing_instance_material = #{wingInstanceMaterial,jdbcType=INTEGER},
+      starinfo_instance_material = #{starinfoInstanceMaterial,jdbcType=INTEGER},
+      red_piece = #{redPiece,jdbcType=INTEGER},
+      artifice_material = #{artificeMaterial,jdbcType=INTEGER},
+      lottery = #{lottery,jdbcType=INTEGER},
+      warspirit_talent_material = #{warspiritTalentMaterial,jdbcType=INTEGER},
+      warspirit_lv_material = #{warspiritLvMaterial,jdbcType=INTEGER},
+      warspirit_lv = #{warspiritLv,jdbcType=INTEGER},
+      warspirit_exp = #{warspiritExp,jdbcType=INTEGER},
+      warspirit_talent = #{warspiritTalent,jdbcType=INTEGER},
+      vicegeneral_decomposition = #{vicegeneralDecomposition,jdbcType=INTEGER},
+      vicegeneral_drawCard = #{vicegeneralDrawcard,jdbcType=INTEGER},
+      copyCent = #{copycent,jdbcType=INTEGER},
+      civilWarCent = #{civilwarcent,jdbcType=INTEGER},
+      GuildForage = #{guildforage,jdbcType=INTEGER},
+      dress_material = #{dressMaterial,jdbcType=INTEGER},
+      exp_material = #{expMaterial,jdbcType=INTEGER},
+      rebirth = #{rebirth,jdbcType=INTEGER},
+      rebirthExp = #{rebirthexp,jdbcType=INTEGER},
+      preMainTaskId = #{premaintaskid,jdbcType=INTEGER},
+      curMainTaskCompleteCount = #{curmaintaskcompletecount,jdbcType=INTEGER},
+      microRewardState = #{microrewardstate,jdbcType=INTEGER},
+      viceGeneratanceMaterial = #{vicegeneratancematerial,jdbcType=INTEGER},
+      viceGeneratanceInstanceTime = #{vicegeneratanceinstancetime,jdbcType=INTEGER},
+      title_0 = #{title0,jdbcType=INTEGER},
+      title_1 = #{title1,jdbcType=INTEGER},
+      title_2 = #{title2,jdbcType=INTEGER},
+      clientData_0 = #{clientdata0,jdbcType=INTEGER},
+      clientData_1 = #{clientdata1,jdbcType=INTEGER},
+      clientData_2 = #{clientdata2,jdbcType=INTEGER},
+      clientData_3 = #{clientdata3,jdbcType=INTEGER},
+      clientData_4 = #{clientdata4,jdbcType=INTEGER},
+      clientData_5 = #{clientdata5,jdbcType=INTEGER},
+      clientData_6 = #{clientdata6,jdbcType=INTEGER},
+      clientData_7 = #{clientdata7,jdbcType=INTEGER},
+      clientData_8 = #{clientdata8,jdbcType=INTEGER},
+      clientData_9 = #{clientdata9,jdbcType=INTEGER},
+      guessgold = #{guessgold,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,12 @@
+server:
+  port: 5566
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    

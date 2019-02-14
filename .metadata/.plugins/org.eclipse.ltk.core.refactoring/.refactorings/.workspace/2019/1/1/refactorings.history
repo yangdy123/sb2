@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;zzNettyWebSocket&apos;" deleteContents="true" description="Delete resource &apos;zzNettyWebSocket&apos;" element1="/zzNettyWebSocket" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1546623699455"/>
+</session>

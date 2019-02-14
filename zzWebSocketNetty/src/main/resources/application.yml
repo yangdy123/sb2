@@ -1,0 +1,9 @@
+server:
+  port: 8002
+#  
+netty-websocket:
+  host: 0.0.0.0
+  path: /websocket
+  port: 8050
+    
+    

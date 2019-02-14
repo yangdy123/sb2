@@ -1,0 +1,12 @@
+logging:
+  level:
+    org.springframework.jdbc: WARN
+    
+    
+    
+spring:    
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/legend_game?serverTimezone=GMT&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: qwe123

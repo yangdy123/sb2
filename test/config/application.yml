@@ -1,0 +1,10 @@
+server:
+  port: 8031
+  
+hikari:
+  type: com.mysql.jdbc.Driver
+  url: 127.0.0.1
+  port: 3306
+  db: legend_game
+  user: root
+  pwd : qwe123
