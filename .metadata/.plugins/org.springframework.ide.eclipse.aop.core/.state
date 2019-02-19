@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="base"/>
 <aop-project name="zzRabbitMQ"/>
+<aop-project name="base"/>
 <aop-project name="zzHadoop"/>
 <aop-project name="zzSpringCloud"/>
 <aop-project name="zzThriftServer"/>
 <aop-project name="zzDubboP"/>
-<aop-project name="dubbo-springboot-master"/>
 <aop-project name="zzKafka"/>
-<aop-project name="zzMongoDB3"/>
+<aop-project name="dubbo-springboot-master"/>
 <aop-project name="zzHikari"/>
 <aop-project name="zzMybatis"/>
 <aop-project name="test"/>
-<aop-project name="zzWebSocket"/>
 <aop-project name="zzKafkaSender"/>
 <aop-project name="zzDubboCommon"/>
+<aop-project name="mongoDB3"/>
 <aop-project name="zzDubboC"/>
 <aop-project name="zzThriftProto"/>
 <aop-project name="zzRpc"/>
+<aop-project name="webSocket"/>
 <aop-project name="zzHttpClient"/>
 <aop-project name="zzRedis"/>
 <aop-project name="zzTimmer"/>
 <aop-project name="zzLog"/>
+<aop-project name="mongoDB2"/>
 <aop-project name="zzWeb"/>
 <aop-project name="z"/>
+<aop-project name="shiro"/>
 <aop-project name="springboot1"/>
-<aop-project name="zzMongoDB"/>
 <aop-project name="zzThriftClient"/>
 <aop-project name="zzWebSocketNetty"/>
 <aop-project name="zzJpa"/>
